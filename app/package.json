@@ -1,5 +1,5 @@
 {
-  "name": "add-column-manager",
+  "name": "category-map-manager",
   "version": "0.1.0",
   "type": "module",
   "description": "Tauri + Vue 工具，用于批量维护 theme*.json 栏目映射",

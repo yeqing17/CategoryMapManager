@@ -55,3 +55,6 @@ Example/mappings_export.json
 *.temp
 .cache/
 
+# Project documentation (internal use only)
+项目说明.md
+
