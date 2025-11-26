@@ -1,0 +1,27 @@
+{
+  "name": "add-column-manager",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Tauri + Vue 工具，用于批量维护 theme*.json 栏目映射",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.6.0",
+    "pinia": "^2.3.1",
+    "vue": "^3.5.25"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.6.3",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vue-tsc": "^2.2.12"
+  }
+}
