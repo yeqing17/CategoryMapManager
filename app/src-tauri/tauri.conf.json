@@ -8,14 +8,14 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "AddColumnManager",
+    "productName": "CategoryMapManager",
     "version": "0.1.0"
   },
   "tauri": {
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.addcolumn.manager",
+      "identifier": "com.categorymap.manager",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",

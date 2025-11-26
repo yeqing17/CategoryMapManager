@@ -15,7 +15,7 @@ Tauri 在 Windows 上可以生成以下类型的构建产物：
 - 用途：可自定义安装界面
 
 ### 3. **独立可执行文件**
-- 位置：`app/src-tauri/target/release/AddColumnManager.exe`
+- 位置：`app/src-tauri/target/release/CategoryMapManager.exe`
 - 特点：便携版，无需安装
 - 用途：适合快速测试或便携使用
 
@@ -28,7 +28,7 @@ Tauri 在 Windows 上可以生成以下类型的构建产物：
   "bundle": {
     "active": true,           // 启用 bundle 生成
     "targets": "all",         // 生成所有类型的安装程序
-    "identifier": "com.addcolumn.manager",  // 应用标识符
+      "identifier": "com.categorymap.manager",  // 应用标识符
     "icon": [...],            // 图标文件列表
     "windows": {
       "certificateThumbprint": null,  // 代码签名证书（可选）

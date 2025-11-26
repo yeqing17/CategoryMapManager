@@ -1,5 +1,5 @@
 [package]
-name = "add-column-tauri"
+name = "category-map-manager-tauri"
 version = "0.1.0"
 edition = "2021"
 

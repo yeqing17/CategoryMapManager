@@ -106,7 +106,7 @@ jobs:
           
           # Check for standalone EXE
           if (Test-Path "app\src-tauri\target\release") {
-            $exeFiles = Get-ChildItem "app\src-tauri\target\release\*.exe" -ErrorAction SilentlyContinue | Where-Object { $_.Name -like "AddColumnManager*" }
+            $exeFiles = Get-ChildItem "app\src-tauri\target\release\*.exe" -ErrorAction SilentlyContinue | Where-Object { $_.Name -like "CategoryMapManager*" }
             foreach ($file in $exeFiles) {
               Write-Host "Found EXE: $($file.Name) ($([math]::Round($file.Length/1MB, 2)) MB)"
             }
@@ -133,7 +133,7 @@ jobs:
             ### 🚀 使用方法
             
             1. **安装版**: 下载 `.msi` 或 NSIS `.exe` 文件，运行完成安装
-            2. **便携版**: 下载 `AddColumnManager.exe`，直接运行，无需安装
+            2. **便携版**: 下载 `CategoryMapManager.exe`，直接运行，无需安装
             
             ### 📋 系统要求
             
@@ -142,7 +142,7 @@ jobs:
           files: |
             app/src-tauri/target/release/bundle/msi/*.msi
             app/src-tauri/target/release/bundle/nsis/*.exe
-            app/src-tauri/target/release/AddColumnManager.exe
+            app/src-tauri/target/release/CategoryMapManager.exe
           draft: false
           prerelease: false
         env:

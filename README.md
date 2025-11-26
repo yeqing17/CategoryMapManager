@@ -28,7 +28,7 @@
 ```bash
 # 克隆仓库
 git clone <repository-url>
-cd addColumn/app
+cd CategoryMapManager/app
 
 # 安装依赖
 npm install
@@ -48,7 +48,7 @@ npm run tauri:dev
 ```bash
 # 克隆项目
 git clone <repository-url>
-cd addColumn
+cd CategoryMapManager
 
 # 进入应用目录
 cd app
@@ -81,7 +81,7 @@ cd src-tauri
 cargo build --release
 
 # 3. 可执行文件位于
-# app/src-tauri/target/release/add-column-manager.exe
+# app/src-tauri/target/release/CategoryMapManager.exe
 ```
 
 **注意**：
@@ -132,7 +132,7 @@ cargo build --release
 ## 📁 项目结构
 
 ```
-addColumn/
+CategoryMapManager/
 ├── app/                    # 前端应用目录
 │   ├── src/
 │   │   ├── components/     # Vue 组件
@@ -211,8 +211,8 @@ cargo build --release
 
 构建产物：
 
-- Windows: `app/src-tauri/target/release/add-column-manager.exe`
-- 安装包: `app/src-tauri/target/release/bundle/msi/AddColumnManager_0.1.0_x64_en-US.msi`
+- Windows: `app/src-tauri/target/release/CategoryMapManager.exe`
+- 安装包: `app/src-tauri/target/release/bundle/msi/CategoryMapManager_0.1.0_x64_en-US.msi`
 
 ## 🔗 相关链接
 

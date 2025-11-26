@@ -3,20 +3,6 @@
 version = 4
 
 [[package]]
-name = "add-column-tauri"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "json5",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "thiserror",
- "walkdir",
-]
-
-[[package]]
 name = "adler2"
 version = "2.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -223,6 +209,20 @@ checksum = "599aa35200ffff8f04c1925aa1acc92fa2e08874379ef42e210a80e527e60838"
 dependencies = [
  "serde",
  "toml 0.7.8",
+]
+
+[[package]]
+name = "category-map-manager-tauri"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "json5",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "thiserror",
+ "walkdir",
 ]
 
 [[package]]

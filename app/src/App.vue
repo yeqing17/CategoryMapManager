@@ -36,8 +36,8 @@ const guideSteps = [
     </section>
 
     <transition name="fade">
-      <div v-if="showGuide" class="guide-overlay">
-        <div class="guide-panel">
+      <div v-if="showGuide" class="guide-overlay" @click="showGuide = false">
+        <div class="guide-panel" @click.stop>
           <header>
             <h3>使用指南</h3>
             <button type="button" @click="showGuide = false">×</button>
