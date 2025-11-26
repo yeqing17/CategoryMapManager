@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+app/dist/
+app/src-tauri/target/
+*.exe
+*.dmg
+*.AppImage
+*.deb
+*.rpm
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.specstory/
+.cursorindexingignore
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Tauri
+app/src-tauri/target/
+app/src-tauri/WixTools/
+
+# Backup directories (runtime generated)
+Example/backups/
+**/backups/
+
+# Exported mappings (runtime generated)
+Example/mappings_export.json
+**/mappings_export.json
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
