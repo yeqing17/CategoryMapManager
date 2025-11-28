@@ -261,6 +261,62 @@ export const useMappingStore = defineStore("mapping-store", () => {
     }
   };
 
+  /**
+   * 删除单个文件中的指定映射项。
+   */
+  const deleteMapping = async (filePath: string, localId: string) => {
+    if (!targetDir.value) {
+      error.value = "尚未选择目录，无法删除映射。";
+      return;
+    }
+    try {
+      const backupDir = await invoke<string | null>("delete_mapping", {
+        filePath,
+        localId
+      });
+      // 更新备份路径（如果有备份）
+      if (backupDir) {
+        lastBackupDir.value = backupDir;
+      }
+      // 重新扫描以更新显示
+      await scanDirectory(targetDir.value);
+      error.value = null;
+    } catch (err) {
+      error.value = err instanceof Error ? err.message : String(err);
+    }
+  };
+
+  /**
+   * 批量删除映射项。
+   */
+  const batchDeleteMappings = async (requests: Array<{ filePath: string; localId: string }>) => {
+    if (!targetDir.value) {
+      error.value = "尚未选择目录，无法删除映射。";
+      return;
+    }
+    if (requests.length === 0) {
+      error.value = "请至少选择一条映射进行删除。";
+      return;
+    }
+    try {
+      const result = await invoke<BulkInsertResult>("batch_delete_mappings", {
+        requests
+      });
+      // 更新备份路径和报告（如果有备份）
+      if (result.backupDir) {
+        lastBackupDir.value = result.backupDir;
+      }
+      lastInsertReport.value = result;
+      // 重新扫描以更新显示
+      await scanDirectory(targetDir.value);
+      error.value = null;
+      return result;
+    } catch (err) {
+      error.value = err instanceof Error ? err.message : String(err);
+      throw err;
+    }
+  };
+
   return {
     targetDir,
     files,
@@ -273,7 +329,9 @@ export const useMappingStore = defineStore("mapping-store", () => {
     scanDirectory,
     bulkInsert,
     exportMappings,
-    importMappings
+    importMappings,
+    deleteMapping,
+    batchDeleteMappings
   };
 });
 

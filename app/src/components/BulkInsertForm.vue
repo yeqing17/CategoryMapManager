@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { open as openExternal } from "@tauri-apps/api/shell";
+import { invoke } from "@tauri-apps/api/tauri";
 import { useMappingStore } from "@/stores/mappingStore";
 import type { MappingInput } from "@/types/mapping";
 
@@ -12,7 +12,12 @@ const entries = ref<MappingInput[]>([{ localId: "", gwId: "" }]);
  */
 const openBackupFolder = async () => {
   if (!store.lastBackupDir) return;
-  await openExternal(store.lastBackupDir);
+  try {
+    await invoke("open_folder", { path: store.lastBackupDir });
+  } catch (err) {
+    console.error("打开文件夹失败:", err);
+    store.error = err instanceof Error ? err.message : String(err);
+  }
 };
 
 /**
