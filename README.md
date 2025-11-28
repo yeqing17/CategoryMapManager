@@ -162,7 +162,7 @@ cargo build --release
 
 ## 📁 项目结构
 
-```
+```text
 CategoryMapManager/
 ├── app/                    # 前端应用目录
 │   ├── src/
@@ -228,6 +228,38 @@ yeiqng
 
 项目配置了 GitHub Actions 自动构建工作流，当推送 tag（格式：`v*`）时会自动构建并上传构建产物。
 
+**推荐使用安装包**：
+
+- **MSI 安装包**（推荐）：`.msi` 文件，Windows 标准安装程序，更安全可靠
+- **NSIS 安装包**：`.exe` 安装程序，另一种安装方式
+- **便携版 EXE**：直接运行的 `.exe` 文件，无需安装
+
+### ⚠️ Windows SmartScreen 警告处理
+
+由于应用未进行代码签名，Windows SmartScreen 可能会显示安全警告。这是正常现象，请按以下步骤处理：
+
+#### 方法一：使用安装包（推荐）
+
+**优先使用 MSI 或 NSIS 安装包**，安装包通常更容易被 Windows 信任，较少出现 SmartScreen 警告。
+
+#### 方法二：解除便携版 EXE 锁定
+
+如果使用便携版 `.exe` 文件遇到 SmartScreen 警告：
+
+1. **下载文件后**，右键点击 `.exe` 文件
+2. 选择 **"属性"**
+3. 在属性窗口底部，如果看到 **"此文件来自其他计算机，可能被阻止以帮助保护该计算机"**
+4. 勾选 **"解除锁定"** 复选框
+5. 点击 **"确定"**
+6. 现在可以正常双击运行程序了
+
+#### 方法三：通过 Windows Defender 添加例外
+
+1. 打开 **Windows 安全中心**
+2. 进入 **"病毒和威胁防护"**
+3. 点击 **"病毒和威胁防护设置"** → **"管理设置"**
+4. 在 **"排除项"** 中添加程序所在文件夹
+
 ### 手动构建
 
 如果自动构建遇到问题，可以手动构建：
@@ -243,7 +275,7 @@ cargo build --release
 构建产物：
 
 - Windows: `app/src-tauri/target/release/CategoryMapManager.exe`
-- 安装包: `app/src-tauri/target/release/bundle/msi/CategoryMapManager_0.1.0_x64_en-US.msi`
+- 安装包: `app/src-tauri/target/release/bundle/msi/CategoryMapManager_*.msi`
 
 ## 🔗 相关链接
 

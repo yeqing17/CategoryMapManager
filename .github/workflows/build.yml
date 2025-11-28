@@ -33,6 +33,13 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
+          
+      - name: Install Windows build tools
+        if: matrix.platform == 'windows-latest'
+        run: |
+          Write-Host "Checking for Visual Studio Build Tools..."
+          # Windows runner already has VS Build Tools, but we can verify
+          rustup target add x86_64-pc-windows-msvc
 
       - name: Install dependencies (Ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
@@ -49,7 +56,43 @@ jobs:
         env:
           TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
           TAURI_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
-        run: npm run tauri:build
+        run: |
+          Write-Host "=== Building Tauri application ==="
+          Write-Host "Node version: $(node --version)"
+          Write-Host "NPM version: $(npm --version)"
+          Write-Host "Rust version: $(rustc --version)"
+          Write-Host "Building in release mode..."
+          npm run tauri:build
+          Write-Host "=== Build completed ==="
+          
+      - name: Verify build outputs
+        run: |
+          Write-Host "=== Verifying build outputs ==="
+          $exePath = "app\src-tauri\target\release\CategoryMapManager.exe"
+          if (Test-Path $exePath) {
+            $fileInfo = Get-Item $exePath
+            Write-Host "✓ Found CategoryMapManager.exe"
+            Write-Host "  Size: $([math]::Round($fileInfo.Length/1MB, 2)) MB"
+            Write-Host "  Last Modified: $($fileInfo.LastWriteTime)"
+            
+            # 检查文件是否可执行（至少检查文件头）
+            $bytes = [System.IO.File]::ReadAllBytes($exePath)
+            if ($bytes.Length -gt 0) {
+              Write-Host "  File is not empty"
+              # 检查 PE 文件头 (MZ)
+              if ($bytes[0] -eq 0x4D -and $bytes[1] -eq 0x5A) {
+                Write-Host "  ✓ Valid PE executable header"
+              } else {
+                Write-Host "  ⚠ WARNING: Invalid PE header!"
+              }
+            } else {
+              Write-Host "  ⚠ WARNING: File is empty!"
+              exit 1
+            }
+          } else {
+            Write-Host "✗ CategoryMapManager.exe not found!"
+            exit 1
+          }
 
       - name: List build outputs
         run: |
@@ -132,8 +175,18 @@ jobs:
             
             ### 🚀 使用方法
             
-            1. **安装版**: 下载 `.msi` 或 NSIS `.exe` 文件，运行完成安装
+            1. **安装版（推荐）**: 下载 `.msi` 或 NSIS `.exe` 文件，运行完成安装
             2. **便携版**: 下载 `CategoryMapManager.exe`，直接运行，无需安装
+            
+            ### ⚠️ Windows SmartScreen 警告处理
+            
+            由于应用未进行代码签名，Windows SmartScreen 可能会显示安全警告。这是正常现象：
+            
+            - **推荐使用安装包**：MSI 或 NSIS 安装包通常更容易被 Windows 信任
+            - **便携版处理**：如果使用便携版 `.exe` 遇到警告，请：
+              1. 右键点击文件 → 选择"属性"
+              2. 在属性窗口底部勾选"解除锁定"
+              3. 点击"确定"后即可正常运行
             
             ### 📋 系统要求
             
