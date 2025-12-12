@@ -9,16 +9,50 @@ const store = useMappingStore();
 
 const showGuide = ref(false);
 const guideSteps = [
-  { title: "选择目标目录", desc: "点击「浏览」选择包含 theme*.json 的目录，或直接在输入框粘贴路径。" },
-  { title: "扫描文件", desc: "点击「扫描」按钮，程序会自动识别所有 theme*.json 文件中的 sExtOptions 段落，提取 portal_frag_* 映射关系。" },
-  { title: "查看结果", desc: "扫描后可在下方查看每个文件的映射详情，包括本地栏目ID、国网栏目ID和状态（正常/重复）。结果按本地栏目ID数值大小自动排序。" },
-  { title: "对比视图", desc: "点击「对比显示」按钮，可以查看所有文件的映射关系对比。相同映射会自动折叠，不同映射会高亮显示，方便快速定位差异。" },
-  { title: "批量新增", desc: "在批量新增区域填写本地栏目ID和国网栏目ID，点击「写入所有文件」即可同步到所有 theme 文件。操作前会自动创建备份。" },
-  { title: "删除映射", desc: "支持单个和批量删除。在映射表格中勾选需要删除的项，点击「批量删除」按钮。所有删除操作前都会自动创建备份。" },
-  { title: "导出/导入", desc: "「导出」可将去重后的映射导出为 JSON 文件；「导入」可批量替换现有映射。导入前会自动创建备份并显示确认对话框。" },
-  { title: "操作日志", desc: "每次批量操作后，程序会在处理文件的目录下自动生成操作日志文件，记录操作详情、备份路径和处理的映射信息。" },
-  { title: "自动备份", desc: "所有文件修改操作（新增、删除、导入）前都会自动创建备份，备份路径显示在操作结果中，可通过「打开」按钮查看。" },
-  { title: "注意事项", desc: "本地栏目ID必须唯一，重复时会标记为错误；国网栏目ID可以重复但会给出警告提示。" }
+  {
+    title: "选择目标目录",
+    desc: "点击「浏览」选择包含 theme*.json 的目录，或直接在输入框粘贴路径。",
+  },
+  {
+    title: "版本号管理",
+    desc: "在目标目录区域可以看到「自动递增版本号」配置选项（默认开启）。启用后，每次修改 theme*.json 文件都会自动将文件中的 version 字段值加 1。",
+  },
+  {
+    title: "扫描文件",
+    desc: "点击「扫描」按钮，程序会自动识别所有 theme*.json 文件中的 sExtOptions 段落，提取 portal_frag_* 映射关系。",
+  },
+  {
+    title: "查看结果",
+    desc: "扫描后可在下方查看每个文件的映射详情，包括本地栏目ID、国网栏目ID和状态（正常/重复）。结果按本地栏目ID数值大小自动排序。",
+  },
+  {
+    title: "对比视图",
+    desc: "点击「对比显示」按钮，可以查看所有文件的映射关系对比。相同映射会自动折叠，不同映射会高亮显示，方便快速定位差异。",
+  },
+  {
+    title: "批量新增",
+    desc: "在批量新增区域填写本地栏目ID和国网栏目ID，点击「写入所有文件」即可同步到所有 theme 文件。操作前会自动创建备份。",
+  },
+  {
+    title: "删除映射",
+    desc: "支持单个和批量删除。在映射表格中勾选需要删除的项，点击「批量删除」按钮。所有删除操作前都会自动创建备份。",
+  },
+  {
+    title: "导出/导入",
+    desc: "「导出」可将去重后的映射导出为 JSON 文件；「导入」可批量替换现有映射。导入前会自动创建备份并显示确认对话框。",
+  },
+  {
+    title: "操作日志",
+    desc: "每次批量操作后，程序会在处理文件的目录下自动生成操作日志文件，记录操作详情、备份路径、版本变化（旧版本 → 新版本）和处理的映射信息。",
+  },
+  {
+    title: "自动备份",
+    desc: "所有文件修改操作（新增、删除、导入）前都会自动创建备份，备份路径显示在操作结果中，可通过「打开」按钮查看。",
+  },
+  {
+    title: "注意事项",
+    desc: "本地栏目ID必须唯一，重复时会标记为错误；国网栏目ID可以重复但会给出警告提示。版本号管理功能可随时通过界面开关控制。",
+  },
 ];
 </script>
 
@@ -27,7 +61,9 @@ const guideSteps = [
     <section class="hero">
       <div class="hero-text">
         <h1>栏目映射管理工具</h1>
-        <p class="subtitle">扫描 theme*.json 的 sExtOptions，识别并批量维护本地/国网栏目ID映射</p>
+        <p class="subtitle">
+          扫描 theme*.json 的 sExtOptions，识别并批量维护本地/国网栏目ID映射
+        </p>
       </div>
       <button class="help-btn" type="button" @click="showGuide = !showGuide">
         使用指南
@@ -145,7 +181,8 @@ const guideSteps = [
   background: linear-gradient(145deg, #ffffff, #f8fafc);
   border-radius: 28px;
   padding: 0;
-  box-shadow: 0 32px 64px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 32px 64px rgba(15, 23, 42, 0.25),
+    0 0 0 1px rgba(15, 23, 42, 0.05);
   display: flex;
   flex-direction: column;
   animation: slideIn 0.3s ease;
@@ -270,4 +307,3 @@ const guideSteps = [
   opacity: 0;
 }
 </style>
-

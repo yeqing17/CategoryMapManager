@@ -31,6 +31,7 @@ export const useMappingStore = defineStore("mapping-store", () => {
   const error = ref<string | null>(null);
   const lastBackupDir = ref<string | null>(null);
   const lastInsertReport = ref<BulkInsertResult | null>(null);
+  const autoIncrementVersion = ref(true); // 默认开启自动递增版本号
 
   const hasData = computed(() => files.value.length > 0);
 
@@ -89,7 +90,8 @@ export const useMappingStore = defineStore("mapping-store", () => {
     try {
       const result = await invoke<BulkInsertResult>("bulk_insert_mappings", {
         targetDir: targetDir.value,
-        entries
+        entries,
+        autoIncrementVersion: autoIncrementVersion.value
       });
       lastInsertReport.value = result;
       // 更新备份路径（如果有备份）
@@ -245,7 +247,8 @@ export const useMappingStore = defineStore("mapping-store", () => {
           // 调用导入命令（替换模式）
           const result = await invoke<BulkInsertResult>("import_mappings", {
             targetDir: targetDir.value,
-            mappings: rawMappings
+            mappings: rawMappings,
+            autoIncrementVersion: autoIncrementVersion.value
           });
 
           lastInsertReport.value = result;
@@ -272,7 +275,8 @@ export const useMappingStore = defineStore("mapping-store", () => {
     try {
       const backupDir = await invoke<string | null>("delete_mapping", {
         filePath,
-        localId
+        localId,
+        autoIncrementVersion: autoIncrementVersion.value
       });
       // 更新备份路径（如果有备份）
       if (backupDir) {
@@ -300,7 +304,8 @@ export const useMappingStore = defineStore("mapping-store", () => {
     }
     try {
       const result = await invoke<BulkInsertResult>("batch_delete_mappings", {
-        requests
+        requests,
+        autoIncrementVersion: autoIncrementVersion.value
       });
       // 更新备份路径和报告（如果有备份）
       if (result.backupDir) {
@@ -325,6 +330,7 @@ export const useMappingStore = defineStore("mapping-store", () => {
     hasData,
     lastBackupDir,
     lastInsertReport,
+    autoIncrementVersion,
     pickDirectory,
     scanDirectory,
     bulkInsert,

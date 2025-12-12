@@ -83,6 +83,14 @@ struct AddedMapping {
     gw_id: String,
 }
 
+/// 版本变化信息
+#[derive(Debug)]
+struct VersionChange {
+    file_path: String,
+    old_version: u32,
+    new_version: u32,
+}
+
 /// 写入操作日志
 fn write_operation_log(
     target_dir: &Path,
@@ -93,6 +101,7 @@ fn write_operation_log(
     additional_info: Option<&str>,
     deleted_mappings: Option<&[DeletedMapping]>,
     added_mappings: Option<&[AddedMapping]>,
+    version_changes: Option<&[VersionChange]>,
 ) -> Result<(), String> {
     let timestamp = Local::now();
     let log_filename = format!("operation_{}.log", timestamp.format("%Y%m%d-%H%M%S"));
@@ -125,6 +134,17 @@ fn write_operation_log(
     // 附加信息
     if let Some(info) = additional_info {
         log_content.push_str(&format!("附加信息: {}\n", info));
+    }
+    
+    // 版本变化信息
+    if let Some(changes) = version_changes {
+        if !changes.is_empty() {
+            log_content.push_str(&format!("版本变化: {} 个文件\n", changes.len()));
+            for change in changes {
+                log_content.push_str(&format!("  {} : {} → {}\n", 
+                    change.file_path, change.old_version, change.new_version));
+            }
+        }
     }
     
     // 新增的映射详情（仅对新增操作）
@@ -255,7 +275,7 @@ fn backup_theme_files(target_dir: String) -> Result<BackupResult, String> {
 }
 
 #[tauri::command]
-fn bulk_insert_mappings(target_dir: String, entries: Vec<MappingInput>) -> Result<BulkInsertResult, String> {
+fn bulk_insert_mappings(target_dir: String, entries: Vec<MappingInput>, auto_increment_version: bool) -> Result<BulkInsertResult, String> {
     if entries.is_empty() {
         return Err("请至少输入一条映射关系。".into());
     }
@@ -325,12 +345,29 @@ fn bulk_insert_mappings(target_dir: String, entries: Vec<MappingInput>) -> Resul
 
     // 收集新增的映射详情（用于日志记录）
     let mut added_mappings: Vec<AddedMapping> = Vec::new();
+    let mut version_changes: Vec<VersionChange> = Vec::new();
 
     // 执行更新
     for (file, pending) in files_to_update {
         let file_path_str = file.to_string_lossy().into_owned();
         let raw = fs::read_to_string(&file).map_err(|err| err.to_string())?;
-        let updated = insert_entries(&raw, &pending)?;
+        let mut updated = insert_entries(&raw, &pending)?;
+        
+        // 如果启用了自动递增版本号，则递增版本号
+        if auto_increment_version {
+            let old_version = extract_version(&raw);
+            updated = increment_version(&updated)?;
+            let new_version = extract_version(&updated);
+            
+            if let (Some(old_ver), Some(new_ver)) = (old_version, new_version) {
+                version_changes.push(VersionChange {
+                    file_path: file_path_str.clone(),
+                    old_version: old_ver,
+                    new_version: new_ver,
+                });
+            }
+        }
+        
         fs::write(&file, updated).map_err(|err| err.to_string())?;
         updated_files.push(file_path_str.clone());
         
@@ -355,6 +392,7 @@ fn bulk_insert_mappings(target_dir: String, entries: Vec<MappingInput>) -> Resul
         Some(&entries_info),
         None,
         Some(&added_mappings),
+        if version_changes.is_empty() { None } else { Some(&version_changes) },
     ) {
         // 日志写入失败不影响主操作，只打印错误
         eprintln!("写入操作日志失败: {}", e);
@@ -371,6 +409,7 @@ fn bulk_insert_mappings(target_dir: String, entries: Vec<MappingInput>) -> Resul
 fn import_mappings(
     target_dir: String,
     mappings: std::collections::HashMap<String, String>,
+    auto_increment_version: bool,
 ) -> Result<BulkInsertResult, String> {
     if mappings.is_empty() {
         return Err("导入的映射为空".into());
@@ -379,6 +418,7 @@ fn import_mappings(
     let dir = PathBuf::from(&target_dir);
     let files = collect_theme_files(&dir)?;
     let mut updated_files = Vec::new();
+    let mut version_changes: Vec<VersionChange> = Vec::new();
 
     // 先备份
     let timestamp = Local::now().format("%Y%m%d-%H%M%S").to_string();
@@ -394,10 +434,27 @@ fn import_mappings(
 
     // 对每个文件执行导入（替换模式）
     for file in files {
+        let file_path_str = file.to_string_lossy().into_owned();
         let raw = fs::read_to_string(&file).map_err(|err| err.to_string())?;
-        let updated = replace_mappings_in_file(&raw, &mappings)?;
+        let mut updated = replace_mappings_in_file(&raw, &mappings)?;
+        
+        // 如果启用了自动递增版本号，则递增版本号
+        if auto_increment_version {
+            let old_version = extract_version(&raw);
+            updated = increment_version(&updated)?;
+            let new_version = extract_version(&updated);
+            
+            if let (Some(old_ver), Some(new_ver)) = (old_version, new_version) {
+                version_changes.push(VersionChange {
+                    file_path: file_path_str.clone(),
+                    old_version: old_ver,
+                    new_version: new_ver,
+                });
+            }
+        }
+        
         fs::write(&file, updated).map_err(|err| err.to_string())?;
-        updated_files.push(file.to_string_lossy().into_owned());
+        updated_files.push(file_path_str);
     }
 
     // 写入操作日志
@@ -411,6 +468,7 @@ fn import_mappings(
         Some(&mappings_info),
         None,
         None,
+        if version_changes.is_empty() { None } else { Some(&version_changes) },
     ) {
         // 日志写入失败不影响主操作，只打印错误
         eprintln!("写入操作日志失败: {}", e);
@@ -424,7 +482,7 @@ fn import_mappings(
 }
 
 #[tauri::command]
-fn delete_mapping(file_path: String, local_id: String) -> Result<Option<String>, String> {
+fn delete_mapping(file_path: String, local_id: String, auto_increment_version: bool) -> Result<Option<String>, String> {
     let path = PathBuf::from(&file_path);
     if !path.exists() {
         return Err("文件不存在".into());
@@ -449,7 +507,24 @@ fn delete_mapping(file_path: String, local_id: String) -> Result<Option<String>,
         .find(|e| e.local_id == local_id)
         .and_then(|e| e.gw_id.clone());
     
-    let updated = remove_mapping_from_file(&raw, &local_id)?;
+    let mut updated = remove_mapping_from_file(&raw, &local_id)?;
+    let mut version_changes: Vec<VersionChange> = Vec::new();
+    
+    // 如果启用了自动递增版本号，则递增版本号
+    if auto_increment_version {
+        let old_version = extract_version(&raw);
+        updated = increment_version(&updated)?;
+        let new_version = extract_version(&updated);
+        
+        if let (Some(old_ver), Some(new_ver)) = (old_version, new_version) {
+            version_changes.push(VersionChange {
+                file_path: file_path.clone(),
+                old_version: old_ver,
+                new_version: new_ver,
+            });
+        }
+    }
+    
     fs::write(&path, updated).map_err(|err| err.to_string())?;
 
     // 写入操作日志
@@ -469,6 +544,7 @@ fn delete_mapping(file_path: String, local_id: String) -> Result<Option<String>,
         Some(&delete_info),
         Some(&deleted_mappings),
         None,
+        if version_changes.is_empty() { None } else { Some(&version_changes) },
     ) {
         // 日志写入失败不影响主操作，只打印错误
         eprintln!("写入操作日志失败: {}", e);
@@ -485,7 +561,7 @@ struct DeleteMappingRequest {
 }
 
 #[tauri::command]
-fn batch_delete_mappings(requests: Vec<DeleteMappingRequest>) -> Result<BulkInsertResult, String> {
+fn batch_delete_mappings(requests: Vec<DeleteMappingRequest>, auto_increment_version: bool) -> Result<BulkInsertResult, String> {
     if requests.is_empty() {
         return Err("删除列表为空".into());
     }
@@ -533,6 +609,7 @@ fn batch_delete_mappings(requests: Vec<DeleteMappingRequest>) -> Result<BulkInse
 
     // 收集删除的映射详情（用于日志记录）
     let mut deleted_mappings: Vec<DeletedMapping> = Vec::new();
+    let mut version_changes: Vec<VersionChange> = Vec::new();
 
     // 对每个文件批量删除
     for (file_path, local_ids) in file_groups {
@@ -566,7 +643,7 @@ fn batch_delete_mappings(requests: Vec<DeleteMappingRequest>) -> Result<BulkInse
         }
 
         // 逐个删除
-        let mut current_content = raw;
+        let mut current_content = raw.clone();
         let mut successfully_deleted_ids = Vec::new();
         let mut failed_to_delete_ids = Vec::new();
         
@@ -593,6 +670,21 @@ fn batch_delete_mappings(requests: Vec<DeleteMappingRequest>) -> Result<BulkInse
         }
 
         if !successfully_deleted_ids.is_empty() {
+            // 如果启用了自动递增版本号，则递增版本号
+            if auto_increment_version {
+                let old_version = extract_version(&raw);
+                current_content = increment_version(&current_content)?;
+                let new_version = extract_version(&current_content);
+                
+                if let (Some(old_ver), Some(new_ver)) = (old_version, new_version) {
+                    version_changes.push(VersionChange {
+                        file_path: file_path.clone(),
+                        old_version: old_ver,
+                        new_version: new_ver,
+                    });
+                }
+            }
+            
             if let Err(err) = fs::write(&path, current_content) {
                 skipped_files.push(SkippedFile {
                     file_path: file_path.clone(),
@@ -651,6 +743,7 @@ fn batch_delete_mappings(requests: Vec<DeleteMappingRequest>) -> Result<BulkInse
         Some(&delete_info),
         Some(&deleted_mappings),
         None,
+        if version_changes.is_empty() { None } else { Some(&version_changes) },
     ) {
         // 日志写入失败不影响主操作，只打印错误
         eprintln!("写入操作日志失败: {}", e);
@@ -695,6 +788,76 @@ fn open_folder(path: String) -> Result<(), String> {
     }
 
     Ok(())
+}
+
+/// 提取 JSON 文件中的版本号
+fn extract_version(content: &str) -> Option<u32> {
+    let lines: Vec<&str> = content.lines().collect();
+    
+    for line in lines {
+        let trimmed = line.trim();
+        
+        // 查找包含 "version": 的行
+        if trimmed.starts_with("\"version\"") && trimmed.contains(':') {
+            // 提取版本号
+            if let Some(colon_pos) = trimmed.find(':') {
+                let value_part = &trimmed[colon_pos + 1..];
+                let value_part = value_part.trim().trim_end_matches(',');
+                
+                if let Ok(version) = value_part.parse::<u32>() {
+                    return Some(version);
+                }
+            }
+        }
+    }
+    None
+}
+
+/// 递增 JSON 文件中的版本号
+fn increment_version(content: &str) -> Result<String, String> {
+    // 查找 "version": 数字 的模式
+    let lines: Vec<&str> = content.lines().collect();
+    let mut updated_lines = Vec::new();
+    let mut version_updated = false;
+    
+    for line in lines {
+        let trimmed = line.trim();
+        
+        // 查找包含 "version": 的行
+        if trimmed.starts_with("\"version\"") && trimmed.contains(':') {
+            // 提取版本号
+            if let Some(colon_pos) = trimmed.find(':') {
+                let value_part = &trimmed[colon_pos + 1..];
+                let value_part = value_part.trim().trim_end_matches(',');
+                
+                if let Ok(current_version) = value_part.parse::<u32>() {
+                    let new_version = current_version + 1;
+                    
+                    // 保持原有的缩进和格式
+                    let indent = line.len() - line.trim_start().len();
+                    let indent_str = " ".repeat(indent);
+                    let comma = if trimmed.ends_with(',') { "," } else { "" };
+                    
+                    let new_line = format!("{}\"version\": {}{}", indent_str, new_version, comma);
+                    updated_lines.push(new_line);
+                    version_updated = true;
+                } else {
+                    updated_lines.push(line.to_string());
+                }
+            } else {
+                updated_lines.push(line.to_string());
+            }
+        } else {
+            updated_lines.push(line.to_string());
+        }
+    }
+    
+    if version_updated {
+        Ok(updated_lines.join("\n"))
+    } else {
+        // 如果没有找到版本号，返回原内容
+        Ok(content.to_string())
+    }
 }
 
 fn main() {

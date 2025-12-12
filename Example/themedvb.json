@@ -1,6 +1,6 @@
 {
   "appId": "homed_v1",
-  "version": 70,
+  "version": 74,
   "mainTheme": "css/role/0/",
   "themeList": [
     {
@@ -463,193 +463,193 @@
       "imgFiles": {
         "font_icons":{//台标字配置
   		"url":"icons.ttf",
-  		"version":8
+    "version": 12
 	},
 	
         "xj_pay_qr": { //微信营业厅二维码
           "url": "icon/xj_pay_qr2.jpg",
           "targetScreenWidth": 1920,
-          "version": 2
+          "version": 6
         },
         "icon_top_home_normal": { //顶部按钮：首页常态icon
           "url": "icon/icon_top_home_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_home_focus": { //顶部按钮：首页焦点icon
           "url": "icon/icon_top_home_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_search_normal": { //顶部按钮：搜索常态icon
           "url": "icon/icon_top_search_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_search_focus": { //顶部按钮：搜索焦点icon
           "url": "icon/icon_top_search_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_mode_normal": { //顶部按钮：搜索常态icon
           "url": "icon/icon_top_mode_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_mode_focus": { //顶部按钮：搜索焦点icon
           "url": "icon/icon_top_mode_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_vip_normal": { //顶部按钮：vip常态icon
           "url": "icon/icon_top_vip_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_vip_focus": { //顶部按钮：vip焦点icon
           "url": "icon/icon_top_vip_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_clock_normal": { //顶部按钮：儿童锁常态icon
           "url": "icon/icon_top_clock_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_clock_focus": { //顶部按钮：儿童锁焦点icon
           "url": "icon/icon_top_clock_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_personal_normal": { //顶部按钮：个人中心常态icon
           "url": "icon/icon_top_personal_normal.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_personal_focus": { //顶部按钮：个人中心焦点icon
           "url": "icon/icon_top_personal_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_setting_normal": { //顶部按钮：系统设置常态icon
           "url": "icon/icon_top_setting_normal.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_setting_focus": { //顶部按钮：系统设置焦点icon
           "url": "icon/icon_top_setting_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_details_full_normal": { //详情页按钮：全屏观看常态icon
           "url": "icon/icon_details_full_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_full_focus": { //详情页按钮：全屏观看焦点icon
           "url": "icon/icon_details_full_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_vip_normal": { //详情页按钮：VIP常态icon
           "url": "icon/icon_details_vip_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_vip_focus": { //详情页按钮：VIP焦点icon
           "url": "icon/icon_details_vip_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collect_normal": { //详情页按钮：收藏常态icon
           "url": "icon/icon_details_collect_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collect_focus": { //详情页按钮：收藏焦点icon
           "url": "icon/icon_details_collect_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collected_normal": { //详情页按钮：已收藏常态icon
           "url": "icon/icon_details_collected_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collected_focus": { //详情页按钮：已收藏焦点icon
           "url": "icon/icon_details_collected_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_follow_normal": { //详情页按钮：追剧常态icon
           "url": "icon/icon_details_follow_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_follow_focus": { //详情页按钮：追剧焦点icon
           "url": "icon/icon_details_follow_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_following_normal": { //详情页按钮：追剧中常态icon
           "url": "icon/icon_details_following_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_following_focus": { //详情页按钮：追剧中焦点icon
           "url": "icon/icon_details_following_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_moreInfo_normal": { //详情页按钮：演员/简介常态icon
           "url": "icon/icon_details_moreInfo_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_moreInfo_focus": { //详情页按钮：演员/简介焦点icon
           "url": "icon/icon_details_moreInfo_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_ji_abstract": { //详情页选集一句换简介bg
           "url": "bg_ji_abstract.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_ji_abstract_arrow": { //详情页选集一句换简介箭头
           "url": "bg_ji_abstract_arrow.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "immerse_detail_arrow_down": { //详情页选集下边的箭头
           "url": "icon/icon_details_arrow_down.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "menu_line_ji_left_arrow": { //详情页选集：左箭头icon
           "url": "icon/icon_details_ji_arrow_left.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "menu_line_ji_right_arrow": { //详情页选集：右箭头icon
           "url": "icon/icon_details_ji_arrow_right.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_play_focus": { //当前播放的焦点动图
           "url": "role/0/play1.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_play_normal": { //当前播放的常态动图
           "url": "role/0/play2.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_play_poster_focus": { //沉浸式直播组件当前播放的焦点动图
           "url": "role/0/play2.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_logo_right": { //右侧logo
           
@@ -658,202 +658,202 @@
             "right": 56 //右侧间隔
           },
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_text_logo": { //默认文字焦点上的icon图片
           "url": "bg_text_logo.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "open_vip_bg": { //开通vip背景图
           "url": "column/vip/bg_open_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "keep_vip_bg": { //续费vip背景图
           "url": "column/vip/bg_keep_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "pay_package_bg": { //电视院线背景图
           "url": "dsyx/dsyx.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_open_vip_bg": { //开通vip按钮图片
           "url": "column/vip/btn_open_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_keep_vip_bg": { //续费vip按钮图片
           "url": "column/vip/btn_keep_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "meal_logo": { //营业厅logo
           "url": "column/vip/meal_logo.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "meal_hall_bg": { //营业厅bg
           "url": "column/vip/bg_1920x1080.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "news_txt_bg": { //新闻资讯bg
           "url": "column/bg_news_1920x1080.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_net_on": { //首页网络icon：已连接
           "url": "icon/icon_net_lan_on.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_net_off": { //首页有线网络icon：未连接
           "url": "icon/icon_net_lan_off.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_net_on_9": { //首页有线网络icon：已连接
           "url": "icon/icon_net_lan_on.png",
           "targetScreenWidth": 1920,
-          "version": 2
+          "version": 6
         },
         "portal_net_on_1": { //首页无线网络icon：已连接
           "url": "icon/icon_net_wifi_on.png",
           "targetScreenWidth": 1920,
-          "version": 2
+          "version": 6
         },
         "sMenu_live": { //悬浮快捷菜单按钮直播icon
           "url": "icon/sMenu_live.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_live_2": { //悬浮快捷菜单按钮直播icon焦点
           "url": "icon/sMenu_live_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_playback": { //悬浮快捷菜单按钮回看icon
           "url": "icon/sMenu_playback.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_playback_2": { //悬浮快捷菜单按钮回看icon焦点
           "url": "icon/sMenu_playback_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_setting": { //悬浮快捷菜单按钮设置icon
           "url": "icon/sMenu_setting.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_setting_2": { //悬浮快捷菜单按钮设置icon焦点
           "url": "icon/sMenu_setting_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_sreach": { //悬浮快捷菜单按钮搜索icon
           "url": "icon/sMenu_sreach.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_sreach_2": { //悬浮快捷菜单按钮搜索icon焦点
           "url": "icon/sMenu_sreach_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_huodong": { //悬浮快捷菜单按钮活动icon
           "url": "icon/sMenu_huodong.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_huodong_2": { //悬浮快捷菜单按钮活动icon焦点
           "url": "icon/sMenu_huodong_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_sMenu": { //悬浮快捷菜单按钮背景图
           "url": "bg_sMenu.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_standard_normal": { //标准模式常态icon
           "url": "icon/icon_mode_standard_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_standard_focus": { //标准模式焦点icon
           "url": "icon/icon_mode_standard_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_standard": { //标准模式背景图
           "url": "bg_mode_standard.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_standard_enter": { //标准模式进入时的背景图
           "url": "role/0/bg_1920x1080.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_children_normal": { //儿童模式常态icon
           "url": "icon/icon_mode_children_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_children_focus": { //儿童模式焦点icon
           "url": "icon/icon_mode_children_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_children": { //儿童模式背景图
           "url": "bg_mode_children.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_children_enter": { //儿童模式进入时的背景图
           "url": "role/1/bg_1920x1080.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_elder_normal": { //长辈模式常态icon
           "url": "icon/icon_mode_elder_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_elder_focus": { //长辈模式焦点icon
           "url": "icon/icon_mode_elder_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_elder": { //长辈模式背景图
           "url": "bg_mode_elder.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_elder_enter": { //长辈模式进入时的背景图
           "url": "role/2/bg_1920x1080.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_selected_normal": { //模式切换界面“√”选中icon
           "url": "icon/icon_mode_selected_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_selected_focus": { //模式切换界面“√”焦点icon
           "url": "icon/icon_mode_selected_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_bottom_logo": { //页面底部提示logo
           "url": "icon/icon_bottom_logo.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "focus_rb_2": { //焦点状态图标配置，imgFiles中设置key为 focus_rb_+媒资类型， 如 点播 focus_rb_2。更多见homed媒资类型定义
           "url": "role/0/play_3.png",
@@ -862,7 +862,7 @@
             "right": -20
           },
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         // "portal_user_r130": { //156-个人中心首屏组件的用户默认头像，不设置就显示homed用户头像
         //   "url": "icon/user_avatar.png",
@@ -872,7 +872,7 @@
         "portal_video_image": { //首页视频视频窗口默认图
           "url": "bg_laoding_default_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_video_hint": { //沉浸式版式视频加载过程中显示的图片
           
@@ -880,207 +880,207 @@
             "top": 150
           },
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_video_full_bg": { //沉浸式版式视频加载过程中显示的背景图
           "url": "bg_laoding_default_full.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "dvb_live_unauthorize_0": { //直播未授权提示背景图：全屏
           "url": "bg_tips_live_full.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "dvb_live_unauthorize_1": { //直播未授权提示背景图：窗口
           "url": "bg_tips_live_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_pfbar_up": { //pfbar上页键提示语icon
           "url": "icon/icon_pfbar_up.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_pfbar_down": { //pfbar下页键提示语icon
           "url": "icon/icon_pfbar_down.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_state_shift": { //时移状态icon
           "url": "icon/icon_shift.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_state_pause": { //时移暂停状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_state_mute": { //直播静音状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "vod_state_btv": { //回看状态icon
           "url": "icon/icon_playback.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         /*"vod_state_pause": { //点播/回看暂停状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },*/
         "vod_state_mute": { //点播/回看静音状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_play_next": { //点播下一级提示icon
           "url": "icon/icon_play_next.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_live": { //直播EPG-节目列表上正在直播节目的角标
           "url": "icon/tag_epg_live.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_playback": { //直播EPG-节目列表上回看节目的角标
           "url": "icon/tag_epg_playback.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_future_normal": { //直播EPG-节目列表上未播节目的常态角标
           "url": "icon/tag_epg_future_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_future_focus": { //直播EPG-节目列表上未播节目的焦点角标
           "url": "icon/tag_epg_future_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_channel_keys_hint": { //直播EPG-右侧按键提示
           "url": "tips_epg.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_pf_ad_fh": { //直播PF上的默认广告图
           "url": "default_poster.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_seek_time": { //时移SEEK底图
           "url": "live_seek_time.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_toast": { //全局提示框底图
           "url": "bg_toast.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "Details_ad1": { //详情页广告图一
           "url": "details_ad1.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "Details_ad2": { //详情页广告图二
           "url": "details_ad2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "Details_ad3": { //详情页广告图三
           "url": "details_ad3.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btv_date_arrow": { //电视回看epg列表的双箭头图
           "url": "icon/icon_btv_date_arrow.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_tips_default_full": { //无文字提示背景图：全屏
           "url": "bg_tips_default_full.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_tips_default_window": { //无文字提示背景图：窗口
           "url": "bg_tips_default_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_tips_details_window": { //无文字提示背景图：标准版详情页小视频窗口
           "url": "bg_tips_details_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_laoding": { //laoding动图
           "url": "icon/icon_laoding.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_lock_normal": { //桌面管理：锁常态icon
           "url": "icon/icon_column_management_lock_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_lock_focus": { //桌面管理：锁焦点icon
           "url": "icon/icon_column_management_lock_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_right_normal": { //桌面管理："√"常态icon
           "url": "icon/icon_column_management_right_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_right_focus": { //桌面管理："√"焦点icon
           "url": "icon/icon_column_management_right_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_restore_normal": { //桌面管理：恢复默认常态icon
           "url": "icon/icon_column_management_restore_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_restore_focus": { //桌面管理：恢复默认焦点icon
           "url": "icon/icon_column_management_restore_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "star_recognize_icon": { //蜗牛识人明星海报没有的时候加载的默认图
           "url": "icon/star_recognize_icon.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "recommend_lite_shadow": { //渐变色图；使用到的场景：沉侵式详情页、进度条、推荐底图等等
           "url": "recommend_lite_shadow.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "series_rt_ji_usage_1": { //详情剧集列表预告角标图
           "url": "icon/icon_details_ji_previewed.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "series_rt_qi_usage_1": { //详情期集列表预告角标图
           "url": "icon/icon_details_ji_previewed.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "vod_menu_checkmark": { //播控菜单勾选图
           "url": "icon/icon_vod_menu_check.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "vod_menu_checkmark_focus": { //播控菜单勾选图
           "url": "icon/icon_vod_menu_check.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         }
       },
       "themedConfig": {
@@ -1092,7 +1092,7 @@
       "primaryBgImage": { //默认背景图
         "url": "role/0/bg_1920x1080.png",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "portalLogoImage": { //首页左上角logo
         "url": "logo.png",
@@ -1101,125 +1101,125 @@
           "bottom": 19, //底部间隔
           "left": 56 //左侧间隔
         },
-        "version": 3
+        "version": 7
       },
       "posterDefault": { //默认海报，需要制作成.9图
         "url": "default_poster.9.png",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "portalLiveAdImage": { //首页直播版式的广告图片
         "url": "ad1.jpg",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "livePfAdImage": { //直播PFbar广告图片
         "url": "ad2.jpg",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "focusMap": {
         "main": { //基本焦点框，多使用在海报上
           "url": "dynamicfocus/main_focus.jsonf",
           "targetScreenWidth": 1920,
-          "version": 4
+          "version": 8
         },
 	"cinema_focus":{//352模板电视院线模版焦点
 	  "url": "dsyx/jiaodian.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
 	},
         "main_text": { //文字焦点的投影
           "url": "role/0/focus_04.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
 	"rrect_r20": { //针对异性海报特殊焦点框焦点框
             "url": "dynamicfocus/allotype_focus.jsonf",
             "targetScreenWidth": 1920,
-            "version": 6
+            "version": 10
           },
         "rrect_r22": { //一级栏目的焦点
           "url": "dynamicfocus/column_focus.jsonf",
           "targetScreenWidth": 1920,
-          "version": 6
+          "version": 10
         },
          "rrect_r34": { //搜索焦点框
           "url": "role/0/btn_r40_shadow.9.png",
           "targetScreenWidth": 1920,
-          "version": 5
+          "version": 9
         },
         "rrect_r22_img": { //一级栏目使用栏目海报时的焦点
           "url": "role/0/focus_02_img.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "rrect_r30": { //底部按钮的焦点
           "url": "role/0/focus_03.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "circle_172": { //圆形组件的焦点框
           "url": "dynamicfocus/circular_foucs.jsonf",
           "targetScreenWidth": 1920,
-          "version": 4
+          "version": 8
         },
         "circle_237": { //166-蜗牛TV圆形组件的焦点框
           "url": "role/0/circle_237.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "circle_180": { //详情页更多弹出的明星头像焦点框
           "url": "role/0/circle_180.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_r40_shadow": { //顶部按钮、详情页按钮焦点阴影(动态焦点)
           "url": "dynamicfocus/column_focus.jsonf",
           "targetScreenWidth": 1920,
-          "version": 4
+          "version": 8
         },
         "btn_c40_shadow": { //首页顶部右侧圆形按钮焦点阴影
           "url": "dynamicfocus/column_focus.jsonf",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "circle_162_shadow": { //悬浮快捷菜单焦点阴影
           "url": "role/0/circle_162_shadow.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         }
       },
       "tagFiles": {
         "pay": {
           "url": "tag_pay.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live": {
           "url": "tag_live.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "new": {
           "url": "tag_new.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "subject": {
           "url": "tag_subject.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
        /* "label_bg": {
           "url": "role/0/focus_02.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },*/
         "top_btn_bg": {
           "url": "top_btn_bg.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         }
       },
       "portalColumnConfigMap": {
@@ -1232,7 +1232,7 @@
         "YOUKU": {
           "url": "YOUKU.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         }
       }
     },
@@ -1546,192 +1546,192 @@
         "icon_top_home_normal": { //顶部按钮：首页常态icon
           "url": "icon/icon_top_home_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_home_focus": { //顶部按钮：首页焦点icon
           "url": "icon/icon_top_home_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_search_normal": { //顶部按钮：搜索常态icon
           "url": "icon/icon_top_search_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_search_focus": { //顶部按钮：搜索焦点icon
           "url": "icon/icon_top_search_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_mode_normal": { //顶部按钮：搜索常态icon
           "url": "icon/icon_top_mode_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_mode_focus": { //顶部按钮：搜索焦点icon
           "url": "icon/icon_top_mode_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_vip_normal": { //顶部按钮：vip常态icon
           "url": "icon/icon_top_vip_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_vip_focus": { //顶部按钮：vip焦点icon
           "url": "icon/icon_top_vip_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_history_normal": { //顶部按钮：记录常态icon
           "url": "icon/icon_top_history_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_history_focus": { //顶部按钮：记录焦点icon
           "url": "icon/icon_top_history_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_clock_normal": { //顶部按钮：儿童锁常态icon
           "url": "icon/icon_top_clock_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_clock_focus": { //顶部按钮：儿童锁焦点icon
           "url": "icon/icon_top_clock_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
           "icon_top_personal_normal": { //顶部按钮：个人中心常态icon
           "url": "icon/icon_top_personal_normal.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_personal_focus": { //顶部按钮：个人中心焦点icon
           "url": "icon/icon_top_personal_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_setting_normal": { //顶部按钮：系统设置常态icon
           "url": "icon/icon_top_setting_normal.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_setting_focus": { //顶部按钮：系统设置焦点icon
           "url": "icon/icon_top_setting_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_details_full_normal": { //详情页按钮：全屏观看常态icon
           "url": "icon/icon_details_full_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_full_focus": { //详情页按钮：全屏观看焦点icon
           "url": "icon/icon_details_full_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_vip_normal": { //详情页按钮：VIP常态icon
           "url": "icon/icon_details_vip_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_vip_focus": { //详情页按钮：VIP焦点icon
           "url": "icon/icon_details_vip_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collect_normal": { //详情页按钮：收藏常态icon
           "url": "icon/icon_details_collect_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collect_focus": { //详情页按钮：收藏焦点icon
           "url": "icon/icon_details_collect_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collected_normal": { //详情页按钮：已收藏常态icon
           "url": "icon/icon_details_collected_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collected_focus": { //详情页按钮：已收藏焦点icon
           "url": "icon/icon_details_collected_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_follow_normal": { //详情页按钮：追剧常态icon
           "url": "icon/icon_details_follow_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_follow_focus": { //详情页按钮：追剧焦点icon
           "url": "icon/icon_details_follow_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_following_normal": { //详情页按钮：追剧中常态icon
           "url": "icon/icon_details_following_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_following_focus": { //详情页按钮：追剧中焦点icon
           "url": "icon/icon_details_following_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_moreInfo_normal": { //详情页按钮：演员/简介常态icon
           "url": "icon/icon_details_moreInfo_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_moreInfo_focus": { //详情页按钮：演员/简介焦点icon
           "url": "icon/icon_details_moreInfo_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_ji_abstract": { //详情页选集一句换简介bg
           "url": "bg_ji_abstract.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_ji_abstract_arrow": { //详情页选集一句换简介箭头
           "url": "bg_ji_abstract_arrow.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "immerse_detail_arrow_down": { //详情页选集下边的箭头
           "url": "icon/icon_details_arrow_down.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "menu_line_ji_left_arrow": { //详情页选集：左箭头icon
           "url": "icon/icon_details_ji_arrow_left.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "menu_line_ji_right_arrow": { //详情页选集：右箭头icon
           "url": "icon/icon_details_ji_arrow_right.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_play_focus": { //当前播放的焦点动图
           "url": "role/1/play1.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_play_normal": { //当前播放的常态动图
           "url": "role/1/play2.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_play_poster_focus": { //沉浸式直播组件当前播放的焦点动图
           "url": "role/1/play2.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_logo_right": { //右侧logo
           
@@ -1740,202 +1740,202 @@
             "right": 56 //右侧间隔
           },
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_text_logo": { //默认文字焦点上的icon图片
           "url": "bg_text_logo.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "open_vip_bg": { //开通vip背景图
           "url": "column/vip/bg_open_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "keep_vip_bg": { //续费vip背景图
           "url": "column/vip/bg_keep_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_open_vip_bg": { //开通vip按钮图片
           "url": "column/vip/btn_open_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_keep_vip_bg": { //续费vip按钮图片
           "url": "column/vip/btn_keep_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "meal_logo": { //营业厅logo
           "url": "column/vip/meal_logo.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "meal_hall_bg": { //营业厅bg
           "url": "column/vip/bg_1920x1080.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "news_txt_bg": { //新闻资讯bg
           "url": "bg_news_1920x1080.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_net_on": { //首页网络icon：已连接
           "url": "icon/icon_net_lan_on.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_net_off": { //首页有线网络icon：未连接
           "url": "icon/icon_net_lan_off.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_net_on_9": { //首页有线网络icon：已连接
           "url": "icon/icon_net_lan_on.png",
           "targetScreenWidth": 1920,
-          "version": 2
+          "version": 6
         },
         "portal_net_on_1": { //首页无线网络icon：已连接
           "url": "icon/icon_net_wifi_on.png",
           "targetScreenWidth": 1920,
-          "version": 2
+          "version": 6
         },
         "sMenu_live": { //悬浮快捷菜单按钮直播icon
           "url": "icon/sMenu_live.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_live_2": { //悬浮快捷菜单按钮直播icon焦点
           "url": "icon/sMenu_live_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_playback": { //悬浮快捷菜单按钮回看icon
           "url": "icon/sMenu_playback.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_playback_2": { //悬浮快捷菜单按钮回看icon焦点
           "url": "icon/sMenu_playback_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_setting": { //悬浮快捷菜单按钮设置icon
           "url": "icon/sMenu_setting.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_setting_2": { //悬浮快捷菜单按钮设置icon焦点
           "url": "icon/sMenu_setting_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_sreach": { //悬浮快捷菜单按钮搜索icon
           "url": "icon/sMenu_sreach.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_sreach_2": { //悬浮快捷菜单按钮搜索icon焦点
           "url": "icon/sMenu_sreach_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_huodong": { //悬浮快捷菜单按钮活动icon
           "url": "icon/sMenu_huodong.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_huodong_2": { //悬浮快捷菜单按钮活动icon焦点
           "url": "icon/sMenu_huodong_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_sMenu": { //悬浮快捷菜单按钮背景图
           "url": "bg_sMenu.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_standard_normal": { //标准模式常态icon
           "url": "icon/icon_mode_standard_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_standard_focus": { //标准模式焦点icon
           "url": "icon/icon_mode_standard_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_standard": { //标准模式背景图
           "url": "bg_mode_standard.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_standard_enter": { //标准模式进入时的背景图
           "url": "role/0/bg_1920x1080.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_children_normal": { //儿童模式常态icon
           "url": "icon/icon_mode_children_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_children_focus": { //儿童模式焦点icon
           "url": "icon/icon_mode_children_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_children": { //儿童模式背景图
           "url": "bg_mode_children.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_children_enter": { //儿童模式进入时的背景图
           "url": "role/1/bg_1920x1080.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "child_lock_question_bg": { //儿童模式退出答题的背景图
           "url": "bg_mode_children_quit.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_elder_normal": { //长辈模式常态icon
           "url": "icon/icon_mode_elder_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_elder_focus": { //长辈模式焦点icon
           "url": "icon/icon_mode_elder_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_elder": { //长辈模式背景图
           "url": "bg_mode_elder.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_elder_enter": { //长辈模式进入时的背景图
           "url": "role/2/bg_1920x1080.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_selected_normal": { //模式切换界面“√”选中icon
           "url": "icon/icon_mode_selected_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_selected_focus": { //模式切换界面“√”焦点icon
           "url": "icon/icon_mode_selected_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_bottom_logo": { //页面底部提示logo
           "url": "icon/icon_bottom_logo.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "focus_rb_2": { //焦点状态图标配置，imgFiles中设置key为 focus_rb_+媒资类型， 如 点播 focus_rb_2。更多见homed媒资类型定义
           "url": "role/1/play_3.png",
@@ -1944,7 +1944,7 @@
             "right": -20
           },
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         // "portal_user_r130": { //156-个人中心首屏组件的用户默认头像，不设置就显示homed用户头像
         //   "url": "icon/user_avatar.png",
@@ -1954,7 +1954,7 @@
         "portal_video_image": { //首页视频视频窗口默认图
           "url": "bg_laoding_default_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_video_hint": { //沉浸式版式视频加载过程中显示的图片
           
@@ -1962,197 +1962,197 @@
             "top": 150
           },
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_video_full_bg": { //沉浸式版式视频加载过程中显示的背景图
           "url": "bg_laoding_default_full.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "dvb_live_unauthorize_0": { //直播未授权提示背景图：全屏
           "url": "bg_tips_live_full.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "dvb_live_unauthorize_1": { //直播未授权提示背景图：窗口
           "url": "bg_tips_live_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_pfbar_up": { //pfbar上页键提示语icon
           "url": "icon/icon_pfbar_up.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_pfbar_down": { //pfbar下页键提示语icon
           "url": "icon/icon_pfbar_down.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_state_shift": { //时移状态icon
           "url": "icon/icon_shift.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_state_pause": { //时移暂停状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_state_mute": { //直播静音状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "vod_state_btv": { //回看状态icon
           "url": "icon/icon_playback.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "vod_state_pause": { //点播/回看暂停状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "vod_state_mute": { //点播/回看静音状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_play_next": { //点播下一级提示icon
           "url": "icon/icon_play_next.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_live": { //直播EPG-节目列表上正在直播节目的角标
           "url": "icon/tag_epg_live.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_playback": { //直播EPG-节目列表上回看节目的角标
           "url": "icon/tag_epg_playback.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_future_normal": { //直播EPG-节目列表上未播节目的常态角标
           "url": "icon/tag_epg_future_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_future_focus": { //直播EPG-节目列表上未播节目的焦点角标
           "url": "icon/tag_epg_future_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_channel_keys_hint": { //直播EPG-右侧按键提示
           "url": "tips_epg.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_pf_ad_fh": { //直播PF上的默认广告图
           "url": "default_poster.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_seek_time": { //时移SEEK底图
           "url": "live_seek_time.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_toast": { //全局提示框底图
           "url": "bg_toast.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "Details_ad1": { //详情页广告图一
           "url": "details_ad1.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "Details_ad2": { //详情页广告图二
           "url": "details_ad2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "Details_ad3": { //详情页广告图三
           "url": "details_ad3.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btv_date_arrow": { //电视回看epg列表的双箭头图
           "url": "icon/icon_btv_date_arrow.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_tips_default_full": { //无文字提示背景图：全屏
           "url": "bg_tips_default_full.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_tips_default_window": { //无文字提示背景图：窗口
           "url": "bg_tips_default_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_laoding": { //laoding动图
           "url": "icon/icon_laoding.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_lock_normal": { //桌面管理：锁常态icon
           "url": "icon/icon_column_management_lock_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_lock_focus": { //桌面管理：锁焦点icon
           "url": "icon/icon_column_management_lock_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_right_normal": { //桌面管理："√"常态icon
           "url": "icon/icon_column_management_right_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_right_focus": { //桌面管理："√"焦点icon
           "url": "icon/icon_column_management_right_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_restore_normal": { //桌面管理：恢复默认常态icon
           "url": "icon/icon_column_management_restore_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_restore_focus": { //桌面管理：恢复默认焦点icon
           "url": "icon/icon_column_management_restore_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "star_recognize_icon": { //蜗牛识人明星海报没有的时候加载的默认图
           "url": "icon/star_recognize_icon.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "series_rt_ji_usage_1": { //详情剧集列表预告角标图
           "url": "icon/icon_details_ji_previewed.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "series_rt_qi_usage_1": { //详情期集列表预告角标图
           "url": "icon/icon_details_ji_previewed.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "vod_menu_checkmark": { //播控菜单勾选图
           "url": "icon/icon_vod_menu_check.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "vod_menu_checkmark_focus": { //播控菜单勾选图
           "url": "icon/icon_vod_menu_check.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         }
       },
       "themedConfig": {
@@ -2163,7 +2163,7 @@
       "primaryBgImage": {
         "url": "role/1/bg_1920x1080.png",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "portalLogoImage": { //首页左上角logo
         "url": "logo.png",
@@ -2172,100 +2172,100 @@
           "bottom": 19, //底部间隔
           "left": 56 //左侧间隔
         },
-        "version": 3
+        "version": 7
       },
       "posterDefault": {
         "url": "xj_default_poster.9.png",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "portalLiveAdImage": {
         "url": "ad1.jpg",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "livePfAdImage": {
         "url": "ad2.jpg",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "focusMap": {
         "main": {
           "url": "role/1/focus_01.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "main_text": {
           "url": "role/1/focus_04.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "rrect_r22": {
           "url": "role/1/focus_02.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "rrect_r22_img": { //一级栏目使用栏目海报时的焦点
           "url": "role/0/focus_02_img.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "rrect_r30": {
           "url": "role/1/focus_03.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "circle_237": { //166-蜗牛TV圆形组件的焦点框
           "url": "role/1/circle_237.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "circle_180": { //详情页更多弹出的明星头像焦点框
           "url": "role/1/circle_180.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_r40_shadow": { //顶部按钮、详情页按钮焦点阴影
           "url": "role/1/btn_r40_shadow.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_c40_shadow": { //首页顶部右侧圆形按钮焦点阴影
           "url": "role/1/btn_c40_shadow.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "circle_162_shadow": { //悬浮快捷菜单焦点阴影
           "url": "role/1/circle_162_shadow.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         }
       },
       "tagFiles": {
         "pay": {
           "url": "tag_pay.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live": {
           "url": "tag_live.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "new": {
           "url": "tag_new.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "subject": {
           "url": "role/2/tag_subject.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "label_bg": {
           "url": "role/1/label_underline2.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         }
       },
       "portalColumnConfigMap": {
@@ -2278,7 +2278,7 @@
         "YOUKU": {
           "url": "YOUKU.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         }
       }
     },
@@ -2592,182 +2592,182 @@
         "icon_top_home_normal": { //顶部按钮：首页常态icon
           "url": "icon/icon_top_home_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_home_focus": { //顶部按钮：首页焦点icon
           "url": "icon/icon_top_home_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_search_normal": { //顶部按钮：搜索常态icon
           "url": "icon/icon_top_search_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_search_focus": { //顶部按钮：搜索焦点icon
           "url": "icon/icon_top_search_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_mode_normal": { //顶部按钮：搜索常态icon
           "url": "icon/icon_top_mode_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_mode_focus": { //顶部按钮：搜索焦点icon
           "url": "icon/icon_top_mode_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_vip_normal": { //顶部按钮：vip常态icon
           "url": "icon/icon_top_vip_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_vip_focus": { //顶部按钮：vip焦点icon
           "url": "icon/icon_top_vip_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_clock_normal": { //顶部按钮：儿童锁常态icon
           "url": "icon/icon_top_clock_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_clock_focus": { //顶部按钮：儿童锁焦点icon
           "url": "icon/icon_top_clock_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_top_personal_normal": { //顶部按钮：个人中心常态icon
           "url": "icon/icon_top_personal_normal.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_personal_focus": { //顶部按钮：个人中心焦点icon
           "url": "icon/icon_top_personal_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_setting_normal": { //顶部按钮：系统设置常态icon
           "url": "icon/icon_top_setting_normal.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_top_setting_focus": { //顶部按钮：系统设置焦点icon
           "url": "icon/icon_top_setting_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_details_full_normal": { //详情页按钮：全屏观看常态icon
           "url": "icon/icon_details_full_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_full_focus": { //详情页按钮：全屏观看焦点icon
           "url": "icon/icon_details_full_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_vip_normal": { //详情页按钮：VIP常态icon
           "url": "icon/icon_details_vip_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_vip_focus": { //详情页按钮：VIP焦点icon
           "url": "icon/icon_details_vip_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collect_normal": { //详情页按钮：收藏常态icon
           "url": "icon/icon_details_collect_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collect_focus": { //详情页按钮：收藏焦点icon
           "url": "icon/icon_details_collect_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collected_normal": { //详情页按钮：已收藏常态icon
           "url": "icon/icon_details_collected_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_collected_focus": { //详情页按钮：已收藏焦点icon
           "url": "icon/icon_details_collected_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_follow_normal": { //详情页按钮：追剧常态icon
           "url": "icon/icon_details_follow_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_follow_focus": { //详情页按钮：追剧焦点icon
           "url": "icon/icon_details_follow_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_following_normal": { //详情页按钮：追剧中常态icon
           "url": "icon/icon_details_following_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_following_focus": { //详情页按钮：追剧中焦点icon
           "url": "icon/icon_details_following_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_moreInfo_normal": { //详情页按钮：演员/简介常态icon
           "url": "icon/icon_details_moreInfo_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_details_moreInfo_focus": { //详情页按钮：演员/简介焦点icon
           "url": "icon/icon_details_moreInfo_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_ji_abstract": { //详情页选集一句换简介bg
           "url": "bg_ji_abstract.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_ji_abstract_arrow": { //详情页选集一句换简介箭头
           "url": "bg_ji_abstract_arrow.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "immerse_detail_arrow_down": { //详情页选集下边的箭头
           "url": "icon/icon_details_arrow_down.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "menu_line_ji_left_arrow": { //详情页选集：左箭头icon
           "url": "icon/icon_details_ji_arrow_left.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "menu_line_ji_right_arrow": { //详情页选集：右箭头icon
           "url": "icon/icon_details_ji_arrow_right.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_play_focus": { //当前播放的焦点动图
           "url": "role/2/play1.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_play_normal": { //当前播放的常态动图
           "url": "role/2/play2.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_play_poster_focus": { //沉浸式直播组件当前播放的焦点动图
           "url": "role/2/play2.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_logo_right": { //右侧logo
           
@@ -2776,197 +2776,197 @@
             "right": 56 //右侧间隔
           },
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_text_logo": { //默认文字焦点上的icon图片
           "url": "bg_text_logo.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "open_vip_bg": { //开通vip背景图
           "url": "column/vip/bg_open_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "keep_vip_bg": { //续费vip背景图
           "url": "column/vip/bg_keep_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_open_vip_bg": { //开通vip按钮图片
           "url": "column/vip/btn_open_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_keep_vip_bg": { //续费vip按钮图片
           "url": "column/vip/btn_keep_vip.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "meal_logo": { //营业厅logo
           "url": "column/vip/meal_logo.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "meal_hall_bg": { //营业厅bg
           "url": "column/vip/bg_1920x1080.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "news_txt_bg": { //新闻资讯bg
           "url": "bg_news_1920x1080.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_net_on": { //首页网络icon：已连接
           "url": "icon/icon_net_lan_on.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_net_off": { //首页有线网络icon：未连接
           "url": "icon/icon_net_lan_off.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_net_on_9": { //首页有线网络icon：已连接
           "url": "icon/icon_net_lan_on.png",
           "targetScreenWidth": 1920,
-          "version": 2
+          "version": 6
         },
         "portal_net_on_1": { //首页无线网络icon：已连接
           "url": "icon/icon_net_wifi_on.png",
           "targetScreenWidth": 1920,
-          "version": 2
+          "version": 6
         },
         "sMenu_live": { //悬浮快捷菜单按钮直播icon
           "url": "icon/sMenu_live.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_live_2": { //悬浮快捷菜单按钮直播icon焦点
           "url": "icon/sMenu_live_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_playback": { //悬浮快捷菜单按钮回看icon
           "url": "icon/sMenu_playback.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_playback_2": { //悬浮快捷菜单按钮回看icon焦点
           "url": "icon/sMenu_playback_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_setting": { //悬浮快捷菜单按钮设置icon
           "url": "icon/sMenu_setting.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_setting_2": { //悬浮快捷菜单按钮设置icon焦点
           "url": "icon/sMenu_setting_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_sreach": { //悬浮快捷菜单按钮搜索icon
           "url": "icon/sMenu_sreach.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_sreach_2": { //悬浮快捷菜单按钮搜索icon焦点
           "url": "icon/sMenu_sreach_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_huodong": { //悬浮快捷菜单按钮活动icon
           "url": "icon/sMenu_huodong.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "sMenu_huodong_2": { //悬浮快捷菜单按钮活动icon焦点
           "url": "icon/sMenu_huodong_2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_sMenu": { //悬浮快捷菜单按钮背景图
           "url": "bg_sMenu.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_standard_normal": { //标准模式常态icon
           "url": "icon/icon_mode_standard_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_standard_focus": { //标准模式焦点icon
           "url": "icon/icon_mode_standard_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_standard": { //标准模式背景图
           "url": "bg_mode_standard.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_standard_enter": { //标准模式进入时的背景图
           "url": "role/0/bg_1920x1080.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_children_normal": { //儿童模式常态icon
           "url": "icon/icon_mode_children_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_children_focus": { //儿童模式焦点icon
           "url": "icon/icon_mode_children_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_children": { //儿童模式背景图
           "url": "bg_mode_children.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_children_enter": { //儿童模式进入时的背景图
           "url": "role/1/bg_1920x1080.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_elder_normal": { //长辈模式常态icon
           "url": "icon/icon_mode_elder_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_elder_focus": { //长辈模式焦点icon
           "url": "icon/icon_mode_elder_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_elder": { //长辈模式背景图
           "url": "bg_mode_elder.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_mode_elder_enter": { //长辈模式进入时的背景图
           "url": "role/2/bg_1920x1080.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_selected_normal": { //模式切换界面“√”选中icon
           "url": "icon/icon_mode_selected_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_mode_selected_focus": { //模式切换界面“√”焦点icon
           "url": "icon/icon_mode_selected_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_bottom_logo": { //页面底部提示logo
           "url": "icon/icon_bottom_logo.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "focus_rb_2": { //焦点状态图标配置，imgFiles中设置key为 focus_rb_+媒资类型， 如 点播 focus_rb_2。更多见homed媒资类型定义
           "url": "role/2/play_3.png",
@@ -2975,17 +2975,17 @@
             "right": -20
           },
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_user_r130": { //156-个人中心首屏组件的用户默认头像，不设置就显示homed用户头像
           "url": "icon/user_avatar.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_video_image": { //首页视频视频窗口默认图
           "url": "bg_laoding_default_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_video_hint": { //沉浸式版式视频加载过程中显示的图片
           
@@ -2993,202 +2993,202 @@
             "top": 150
           },
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "portal_video_full_bg": { //沉浸式版式视频加载过程中显示的背景图
           "url": "bg_laoding_default_full.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "dvb_live_unauthorize_0": { //直播未授权提示背景图：全屏
           "url": "bg_tips_live_full.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "dvb_live_unauthorize_1": { //直播未授权提示背景图：窗口
           "url": "bg_tips_live_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_pfbar_up": { //pfbar上页键提示语icon
           "url": "icon/icon_pfbar_up.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_pfbar_down": { //pfbar下页键提示语icon
           "url": "icon/icon_pfbar_down.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_state_shift": { //时移状态icon
           "url": "icon/icon_shift.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_state_pause": { //时移暂停状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_state_mute": { //直播静音状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "vod_state_btv": { //回看状态icon
           "url": "icon/icon_playback.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "vod_state_pause": { //点播/回看暂停状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "vod_state_mute": { //点播/回看静音状态icon
           
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_play_next": { //点播下一级提示icon
           "url": "icon/icon_play_next.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_live": { //直播EPG-节目列表上正在直播节目的角标
           "url": "icon/tag_epg_live.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_playback": { //直播EPG-节目列表上回看节目的角标
           "url": "icon/tag_epg_playback.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_future_normal": { //直播EPG-节目列表上未播节目的常态角标
           "url": "icon/tag_epg_future_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "tag_epg_future_focus": { //直播EPG-节目列表上未播节目的焦点角标
           "url": "icon/tag_epg_future_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_channel_keys_hint": { //直播EPG-右侧按键提示
           "url": "tips_epg.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_pf_ad_fh": { //直播PF上的默认广告图
           "url": "default_poster.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live_seek_time": { //时移SEEK底图
           "url": "live_seek_time.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_toast": { //全局提示框底图
           "url": "bg_toast.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "Details_ad1": { //详情页广告图一
           "url": "details_ad1.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "Details_ad2": { //详情页广告图二
           "url": "details_ad2.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "Details_ad3": { //详情页广告图三
           "url": "details_ad3.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btv_date_arrow": { //电视回看epg列表的双箭头图
           "url": "icon/icon_btv_date_arrow.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_tips_default_full": { //无文字提示背景图：全屏
           "url": "bg_tips_default_full.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_tips_default_window": { //无文字提示背景图：窗口
           "url": "bg_tips_default_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "bg_tips_details_window": { //无文字提示背景图：标准版详情页小视频窗口
           "url": "bg_tips_details_window.jpg",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "icon_laoding": { //laoding动图
           "url": "icon/icon_laoding.apng",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_lock_normal": { //桌面管理：锁常态icon
           "url": "icon/icon_column_management_lock_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_lock_focus": { //桌面管理：锁焦点icon
           "url": "icon/icon_column_management_lock_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_right_normal": { //桌面管理："√"常态icon
           "url": "icon/icon_column_management_right_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_right_focus": { //桌面管理："√"焦点icon
           "url": "icon/icon_column_management_right_focus.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_restore_normal": { //桌面管理：恢复默认常态icon
           "url": "icon/icon_column_management_restore_normal.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "icon_column_management_restore_focus": { //桌面管理：恢复默认焦点icon
           "url": "icon/icon_column_management_restore_focus.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "star_recognize_icon": { //蜗牛识人明星海报没有的时候加载的默认图
           "url": "icon/star_recognize_icon.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "series_rt_ji_usage_1": { //详情剧集列表预告角标图
           "url": "icon/icon_details_ji_previewed.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "series_rt_qi_usage_1": { //详情期集列表预告角标图
           "url": "icon/icon_details_ji_previewed.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "vod_menu_checkmark": { //播控菜单勾选图
           "url": "icon/icon_vod_menu_check.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         },
         "vod_menu_checkmark_focus": { //播控菜单勾选图
           "url": "icon/icon_vod_menu_check.png",
           "targetScreenWidth": 1920,
-          "version": 1
+          "version": 5
         }
       },
       "themedConfig": {
@@ -3200,7 +3200,7 @@
       "primaryBgImage": {
         "url": "role/2/bg_1920x1080.png",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "portalLogoImage": { //首页左上角logo
         "url": "logo.png",
@@ -3209,100 +3209,100 @@
           "bottom": 19, //底部间隔
           "left": 56 //左侧间隔
         },
-        "version": 3
+        "version": 7
       },
       "posterDefault": {
         "url": "xj_default_poster.9.png",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "portalLiveAdImage": {
         "url": "ad1.jpg",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "livePfAdImage": {
         "url": "ad2.jpg",
         "targetScreenWidth": 1920,
-        "version": 3
+        "version": 7
       },
       "focusMap": {
         "main": {
           "url": "role/2/focus_01.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "main_text": {
           "url": "role/2/focus_04.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "rrect_r22": {
           "url": "role/2/focus_02.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "rrect_r22_img": { //一级栏目使用栏目海报时的焦点
           "url": "role/0/focus_02_img.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "rrect_r30": {
           "url": "role/2/focus_03.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "circle_237": { //166-蜗牛TV圆形组件的焦点框
           "url": "role/2/circle_237.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "circle_180": { //详情页更多弹出的明星头像焦点框
           "url": "role/2/circle_180.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_r40_shadow": { //顶部按钮、详情页按钮焦点阴影
           "url": "role/2/btn_r40_shadow.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "btn_c40_shadow": { //首页顶部右侧圆形按钮焦点阴影
           "url": "role/2/btn_c40_shadow.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "circle_162_shadow": { //悬浮快捷菜单焦点阴影
           "url": "role/2/circle_162_shadow.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         }
       },
       "tagFiles": {
         "pay": {
           "url": "tag_pay.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "live": {
           "url": "tag_live.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "new": {
           "url": "tag_new.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "subject": {
           "url": "role/2/tag_subject.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         },
         "label_bg": {
           "url": "role/2/label_underline2.9.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         }
       },
       "portalColumnConfigMap": {
@@ -3315,7 +3315,7 @@
         "YOUKU": {
           "url": "YOUKU.png",
           "targetScreenWidth": 1920,
-          "version": 3
+          "version": 7
         }
       }
     }
@@ -3570,39 +3570,39 @@
       "sHomedAdIdVolume":1102,//音量条
       "sHomedAdIdVodPf":1071,//点播PF
       //"sHomedAdScreen": 1510, //屏保广告位
-      "sExtOptions": {"live.list.chnl_name.marquee": "1", //频道列表名称支持滚动显示
+      "sExtOptions": {"live.list.chnl_name.marquee": "1", //频道列表名称支持滚动显示,
         "xj.multicast.test_list":"udp://238.1.1.1:5000,udp://238.1.1.2:5000",
-        "live.icc.switch":"2",//快速切udp组播配置支持
-        "portal.user.gd_info.prefix":"广电一号通", 
-        "portal.fold.label_style": "1", //栏目分组焦点的配置项,使用默认填充
-        "portal.fold.style": "0", //栏目分组，样式2，不折叠分组配置
-  	//"portal.keep.fold.menu.expand": "1", //栏目分组，样式2，不折叠分组配置
+        "live.icc.switch":"2",//快速切udp组播配置支持,
+        "portal.user.gd_info.prefix":"广电一号通",
+        "portal.fold.label_style": "1", //栏目分组焦点的配置项,使用默认填充,
+        "portal.fold.style": "0", //栏目分组，样式2，不折叠分组配置,
+  	//"portal.keep.fold.menu.expand": "1", //栏目分组，样式2，不折叠分组配置,
         "message.title_8000":"$.#content.title;",
         "message.content_8000":"$.#content.content;",
-				"launch.use_off_channel":"1",//开机进入全屏直播，配置使用前端开机频道。
-				"portal.label.sort":"0",//瀑布流首页顺序是否使用columnidx排序
-      	"xj_live_noqr_pkgs": "4212000136", //直播鉴权不显示二维码的 package id 列表，多个之间,分割
-        "adid_details_top": "1512", //详情页广告位一
-        "adid_details_bottom1": "1513", //详情页广告位二
-        "adid_details_bottom2": "1514", //详情页广告位三
-        "blink_colors": "#ffffffff,#00ffffff", //blink_四个key为焦点上有流光闪过的效果，colors可任意个，渐变色
-        "blink_duration": "4000", //动画持续时间,毫秒
-        "blink_delay": "500", //动画启动延迟
-        "blink_ratio": "0.45", //光斑大小比例，越大所占海报面积越大
-				"blink_repeat_count":"-1",//动画重复次数，0 不重复， -1 无限重复
-        "blink_repeat_mode":"1",//动画重复方式， 1 重新开始， 2 反转。
-				"blink_values":"0,1,1,1,1",//动画进度曲线，设置多个1，配合duration，可以控制动画重复的间隔
-        "dvb_none_sys_errors": "1,401,402,422,440,452,812,822", //故障反馈弹框，不需要弹框的配置到这里
-        "dvb_ca_errors": "2109,2205,2203,9", //CA未授权的配置到这里，不弹框显示，只是全屏和小屏显示图提示
-        "IQIYI": "http://183.215.134.238:8000/tv/pay.html?channel=1&accessChannel=", //详情页爱奇艺提供商跳转收银台地址
-        "WNShaoEr": "http://183.215.134.238:8000/tv/pay.html?channel=1&accessChannel=", //详情页蜗牛少儿提供商跳转收银台地址
-        "message_url": "http://wntv3webs.tsyrmt.com:10180/messages/index.html", //消息系统地址
-        "datareport": "http://192.168.198.220:9200/userreport/_doc", //故障反馈   自动post数据地址配置
-        "maintain": "http://wntv3maintain.tsyrmt.com", //故障反馈  主动上报信息地址配置
-        "speedTestUrl": "http://speedtest.tsyrmt.cn:8089/speedtest.txt", //网络测速地址
-        "speedTestTime": "10", //网络测速时长
-        "live.valid_chnl_types":"1|2|3", //直播列表显示的类型控制
-        "message.dialog.automatic.dismiss":"1", //收到新消息，立刻显示最新的1条
+				"launch.use_off_channel":"1",//开机进入全屏直播，配置使用前端开机频道。,
+				"portal.label.sort":"0",//瀑布流首页顺序是否使用columnidx排序,
+      	"xj_live_noqr_pkgs": "4212000136", //直播鉴权不显示二维码的 package id 列表，多个之间,分割,
+        "adid_details_top": "1512", //详情页广告位一,
+        "adid_details_bottom1": "1513", //详情页广告位二,
+        "adid_details_bottom2": "1514", //详情页广告位三,
+        "blink_colors": "#ffffffff,#00ffffff", //blink_四个key为焦点上有流光闪过的效果，colors可任意个，渐变色,
+        "blink_duration": "4000", //动画持续时间,毫秒,
+        "blink_delay": "500", //动画启动延迟,
+        "blink_ratio": "0.45", //光斑大小比例，越大所占海报面积越大,
+				"blink_repeat_count":"-1",//动画重复次数，0 不重复， -1 无限重复,
+        "blink_repeat_mode":"1",//动画重复方式， 1 重新开始， 2 反转。,
+				"blink_values":"0,1,1,1,1",//动画进度曲线，设置多个1，配合duration，可以控制动画重复的间隔,
+        "dvb_none_sys_errors": "1,401,402,422,440,452,812,822", //故障反馈弹框，不需要弹框的配置到这里,
+        "dvb_ca_errors": "2109,2205,2203,9", //CA未授权的配置到这里，不弹框显示，只是全屏和小屏显示图提示,
+        "IQIYI": "http://183.215.134.238:8000/tv/pay.html?channel=1&accessChannel=", //详情页爱奇艺提供商跳转收银台地址,
+        "WNShaoEr": "http://183.215.134.238:8000/tv/pay.html?channel=1&accessChannel=", //详情页蜗牛少儿提供商跳转收银台地址,
+        "message_url": "http://wntv3webs.tsyrmt.com:10180/messages/index.html", //消息系统地址,
+        "datareport": "http://192.168.198.220:9200/userreport/_doc", //故障反馈   自动post数据地址配置,
+        "maintain": "http://wntv3maintain.tsyrmt.com", //故障反馈  主动上报信息地址配置,
+        "speedTestUrl": "http://speedtest.tsyrmt.cn:8089/speedtest.txt", //网络测速地址,
+        "speedTestTime": "10", //网络测速时长,
+        "live.valid_chnl_types":"1|2|3", //直播列表显示的类型控制,
+        "message.dialog.automatic.dismiss":"1", //收到新消息，立刻显示最新的1条,
         "portal_home_channel":"4200001195", //首页频道的homed频道id,模板属性play=5时,
         "portal_frag_090909":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=test1&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg=",
         "portal_frag_5257":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=XJjingxuan&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg=",
@@ -3633,10 +3633,10 @@
         "portal_frag_5638":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=xjgongyi&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg=",
         "portal_frag_592":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=XJ4K&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg=",
         "portal_frag_6666":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=dsfaf&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg=",
-        "portal_frag_7777":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=test1&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg=",
-        "portal_frag_8888":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=test2&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg=",
         "portal_frag_88888":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=dsfafaa&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg=",
-        "portal_frag_9999":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=test4&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg="
+        "portal_frag_9999":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=test4&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg=",
+        "portal_frag_98989898":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=asdfasdfaf&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg=",
+        "portal_frag_9898989898":"com.ipanel.join.gw_ui_sdk.GwPortalFragment|intent://?es_tabId=asdfasdfaffff&es_title=&es_focusStartColor=&es_focusEndColor=&es_focusImg="
       },
       "sUserAutoRegisterType": 1, //home自动注册
       "sPortalPatchWallEnableItemLayout": true, //瀑布流，使用专题模板配置

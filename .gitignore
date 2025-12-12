@@ -42,12 +42,13 @@ Thumbs.db
 app/src-tauri/target/
 app/src-tauri/WixTools/
 
+# Example directory (test data, not for version control)
+Example/
+
 # Backup directories (runtime generated)
-Example/backups/
 **/backups/
 
 # Exported mappings (runtime generated)
-Example/mappings_export.json
 **/mappings_export.json
 
 # Temporary files

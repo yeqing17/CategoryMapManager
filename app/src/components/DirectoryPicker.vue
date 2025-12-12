@@ -25,14 +25,27 @@ const totalMappings = computed(() => {
   <section class="picker">
     <div class="header-row">
       <h2>目标目录</h2>
-      <div class="stats" v-if="totalFiles > 0">
-        <div class="stat-item">
-          <span class="stat-label">文件</span>
-          <strong class="stat-value">{{ totalFiles }}</strong>
+      <div class="header-controls">
+        <div class="version-config">
+          <label class="checkbox-wrapper">
+            <input
+              type="checkbox"
+              v-model="store.autoIncrementVersion"
+              class="checkbox-input"
+            />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-label">自动递增版本号</span>
+          </label>
         </div>
-        <div class="stat-item">
-          <span class="stat-label">映射</span>
-          <strong class="stat-value">{{ totalMappings }}</strong>
+        <div class="stats" v-if="totalFiles > 0">
+          <div class="stat-item">
+            <span class="stat-label">文件</span>
+            <strong class="stat-value">{{ totalFiles }}</strong>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">映射</span>
+            <strong class="stat-value">{{ totalMappings }}</strong>
+          </div>
         </div>
       </div>
     </div>
@@ -100,6 +113,12 @@ const totalMappings = computed(() => {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .header-row h2 {
@@ -298,5 +317,69 @@ button.browse-btn:hover {
 .hint.error {
   color: #dc2626;
 }
-</style>
 
+/* 版本号配置样式 */
+.version-config {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 4px;
+  background: #fff;
+  position: relative;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-custom::after {
+  content: "";
+  width: 10px;
+  height: 6px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg) scale(0);
+  transition: transform 0.2s ease;
+}
+
+.checkbox-input:checked + .checkbox-custom {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-color: #2563eb;
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+  transform: rotate(-45deg) scale(1);
+}
+
+.checkbox-wrapper:hover .checkbox-custom {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.checkbox-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+</style>
