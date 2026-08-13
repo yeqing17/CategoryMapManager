@@ -368,6 +368,9 @@ fn bulk_insert_mappings(target_dir: String, entries: Vec<MappingInput>, auto_inc
             }
         }
         
+        validate_jsonc(&updated)
+            .map_err(|e| format!("{}: {}", file_path_str, e))?;
+
         fs::write(&file, updated).map_err(|err| err.to_string())?;
         updated_files.push(file_path_str.clone());
         
@@ -453,6 +456,9 @@ fn import_mappings(
             }
         }
         
+        validate_jsonc(&updated)
+            .map_err(|e| format!("{}: {}", file_path_str, e))?;
+
         fs::write(&file, updated).map_err(|err| err.to_string())?;
         updated_files.push(file_path_str);
     }
@@ -525,6 +531,9 @@ fn delete_mapping(file_path: String, local_id: String, auto_increment_version: b
         }
     }
     
+    validate_jsonc(&updated)
+        .map_err(|e| format!("文件 {} 校验失败: {}", file_path, e))?;
+
     fs::write(&path, updated).map_err(|err| err.to_string())?;
 
     // 写入操作日志
@@ -670,6 +679,8 @@ fn batch_delete_mappings(requests: Vec<DeleteMappingRequest>, auto_increment_ver
         }
 
         if !successfully_deleted_ids.is_empty() {
+            let mut pending_version_change = None;
+
             // 如果启用了自动递增版本号，则递增版本号
             if auto_increment_version {
                 let old_version = extract_version(&raw);
@@ -677,7 +688,7 @@ fn batch_delete_mappings(requests: Vec<DeleteMappingRequest>, auto_increment_ver
                 let new_version = extract_version(&current_content);
                 
                 if let (Some(old_ver), Some(new_ver)) = (old_version, new_version) {
-                    version_changes.push(VersionChange {
+                    pending_version_change = Some(VersionChange {
                         file_path: file_path.clone(),
                         old_version: old_ver,
                         new_version: new_ver,
@@ -685,7 +696,13 @@ fn batch_delete_mappings(requests: Vec<DeleteMappingRequest>, auto_increment_ver
                 }
             }
             
-            if let Err(err) = fs::write(&path, current_content) {
+            if let Err(err) = validate_jsonc(&current_content) {
+                skipped_files.push(SkippedFile {
+                    file_path: file_path.clone(),
+                    reason: format!("JSONC 校验失败: {}", err),
+                    duplicate_ids: successfully_deleted_ids.clone(),
+                });
+            } else if let Err(err) = fs::write(&path, current_content) {
                 skipped_files.push(SkippedFile {
                     file_path: file_path.clone(),
                     reason: format!("写入文件失败: {}", err),
@@ -693,6 +710,9 @@ fn batch_delete_mappings(requests: Vec<DeleteMappingRequest>, auto_increment_ver
                 });
             } else {
                 updated_files.push(file_path.clone());
+                if let Some(change) = pending_version_change {
+                    version_changes.push(change);
+                }
                 // 如果有部分失败，记录跳过的文件
                 if !failed_to_delete_ids.is_empty() {
                     skipped_files.push(SkippedFile {
@@ -835,6 +855,115 @@ fn increment_version(content: &str) -> Result<String, String> {
         // 如果第 3 行不是总版本号，则不修改内容
         Ok(content.to_string())
     }
+}
+
+/// 校验修改后的 JSONC 文件，并检查栏目映射结构
+fn validate_jsonc(content: &str) -> Result<(), String> {
+    let stripped = strip_jsonc_comments(content)?;
+    let root: serde_json::Value = serde_json::from_str(&stripped)
+        .map_err(|e| format!("JSONC 解析失败: {}", e))?;
+
+    let options = root
+        .get("sExtOptions")
+        .and_then(|value| value.as_object())
+        .ok_or_else(|| "sExtOptions 必须是对象".to_string())?;
+
+    for (key, value) in options {
+        if key.starts_with(PORTAL_PREFIX) {
+            let raw_value = value
+                .as_str()
+                .ok_or_else(|| format!("映射项 {} 的值必须是字符串", key))?;
+
+            if raw_value.trim().is_empty() {
+                return Err(format!("映射项 {} 的值为空", key));
+            }
+        }
+    }
+
+    let mappings = parse_mappings(content)
+        .map_err(|e| format!("栏目映射校验失败: {}", e))?;
+    let mut seen_ids = HashSet::new();
+
+    for mapping in mappings {
+        if !seen_ids.insert(mapping.local_id.clone()) {
+            return Err(format!("栏目映射存在重复本地ID: {}", mapping.local_id));
+        }
+    }
+
+    Ok(())
+}
+
+/// 移除 JSONC 中的注释，保留字符串内容和转义字符
+fn strip_jsonc_comments(content: &str) -> Result<String, String> {
+    let bytes = content.as_bytes();
+    let mut output = Vec::with_capacity(bytes.len());
+    let mut i = 0usize;
+    let mut in_string = false;
+    let mut escaped = false;
+
+    while i < bytes.len() {
+        let ch = bytes[i];
+
+        if in_string {
+            output.push(ch);
+            if escaped {
+                escaped = false;
+            } else if ch == b'\\' {
+                escaped = true;
+            } else if ch == b'"' {
+                in_string = false;
+            }
+            i += 1;
+            continue;
+        }
+
+        if ch == b'"' {
+            in_string = true;
+            output.push(ch);
+            i += 1;
+            continue;
+        }
+
+        if ch == b'/' && i + 1 < bytes.len() {
+            if bytes[i + 1] == b'/' {
+                while i < bytes.len() && bytes[i] != b'\n' {
+                    i += 1;
+                }
+                continue;
+            }
+
+            if bytes[i + 1] == b'*' {
+                i += 2;
+                let mut closed = false;
+
+                while i + 1 < bytes.len() {
+                    if bytes[i] == b'*' && bytes[i + 1] == b'/' {
+                        closed = true;
+                        i += 2;
+                        break;
+                    }
+                    i += 1;
+                }
+
+                if !closed {
+                    return Err("JSONC 校验失败: 未闭合的块注释".into());
+                }
+
+                output.push(b' ');
+                continue;
+            }
+        }
+
+        output.push(ch);
+        i += 1;
+    }
+
+    if in_string {
+        return Err("JSONC 校验失败: 未闭合的字符串".into());
+    }
+
+    String::from_utf8(output)
+        .map_err(|_| "JSONC 校验失败: 文件包含非 UTF-8 字符".to_string())
 }
 
 fn main() {
