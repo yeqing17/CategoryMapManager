@@ -790,72 +790,49 @@ fn open_folder(path: String) -> Result<(), String> {
     Ok(())
 }
 
-/// 提取 JSON 文件中的版本号
+/// 提取 JSON 文件第 3 行开头的总版本号
 fn extract_version(content: &str) -> Option<u32> {
-    let lines: Vec<&str> = content.lines().collect();
-    
-    for line in lines {
-        let trimmed = line.trim();
-        
-        // 查找包含 "version": 的行
-        if trimmed.starts_with("\"version\"") && trimmed.contains(':') {
-            // 提取版本号
-            if let Some(colon_pos) = trimmed.find(':') {
-                let value_part = &trimmed[colon_pos + 1..];
-                let value_part = value_part.trim().trim_end_matches(',');
-                
-                if let Ok(version) = value_part.parse::<u32>() {
-                    return Some(version);
-                }
-            }
-        }
-    }
-    None
+    let line = content.lines().nth(2)?;
+    parse_version_line(line)
 }
 
-/// 递增 JSON 文件中的版本号
-fn increment_version(content: &str) -> Result<String, String> {
-    // 查找 "version": 数字 的模式
-    let lines: Vec<&str> = content.lines().collect();
-    let mut updated_lines = Vec::new();
-    let mut version_updated = false;
-    
-    for line in lines {
-        let trimmed = line.trim();
-        
-        // 查找包含 "version": 的行
-        if trimmed.starts_with("\"version\"") && trimmed.contains(':') {
-            // 提取版本号
-            if let Some(colon_pos) = trimmed.find(':') {
-                let value_part = &trimmed[colon_pos + 1..];
-                let value_part = value_part.trim().trim_end_matches(',');
-                
-                if let Ok(current_version) = value_part.parse::<u32>() {
-                    let new_version = current_version + 1;
-                    
-                    // 保持原有的缩进和格式
-                    let indent = line.len() - line.trim_start().len();
-                    let indent_str = " ".repeat(indent);
-                    let comma = if trimmed.ends_with(',') { "," } else { "" };
-                    
-                    let new_line = format!("{}\"version\": {}{}", indent_str, new_version, comma);
-                    updated_lines.push(new_line);
-                    version_updated = true;
-                } else {
-                    updated_lines.push(line.to_string());
-                }
-            } else {
-                updated_lines.push(line.to_string());
-            }
-        } else {
-            updated_lines.push(line.to_string());
-        }
+/// 解析单个 "version": 数字 行
+fn parse_version_line(line: &str) -> Option<u32> {
+    let trimmed = line.trim();
+
+    if !trimmed.starts_with("\"version\"") || !trimmed.contains(':') {
+        return None;
     }
-    
-    if version_updated {
+
+    let colon_pos = trimmed.find(':')?;
+    let value_part = trimmed[colon_pos + 1..].trim().trim_end_matches(',');
+    value_part.parse::<u32>().ok()
+}
+
+/// 递增 JSON 文件第 3 行开头的总版本号
+fn increment_version(content: &str) -> Result<String, String> {
+    let lines: Vec<&str> = content.lines().collect();
+    let version_line_index = 2;
+
+    if lines.len() <= version_line_index {
+        return Ok(content.to_string());
+    }
+
+    let line = lines[version_line_index];
+    if let Some(current_version) = parse_version_line(line) {
+        let trimmed = line.trim();
+        let indent = line.len() - line.trim_start().len();
+        let indent_str = " ".repeat(indent);
+        let comma = if trimmed.ends_with(',') { "," } else { "" };
+        let new_version = current_version + 1;
+        let new_line = format!("{}\"version\": {}{}", indent_str, new_version, comma);
+
+        let mut updated_lines = lines.into_iter().map(|l| l.to_string()).collect::<Vec<_>>();
+        updated_lines[version_line_index] = new_line;
+
         Ok(updated_lines.join("\n"))
     } else {
-        // 如果没有找到版本号，返回原内容
+        // 如果第 3 行不是总版本号，则不修改内容
         Ok(content.to_string())
     }
 }
