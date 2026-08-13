@@ -1212,6 +1212,45 @@ fn extract_gw_id(raw_value: &str) -> Option<String> {
     }
 }
 
+fn find_last_line_comment_start(content: &str, end: usize) -> Option<usize> {
+    let line_start = content[..end].rfind('\n').map_or(0, |pos| pos + 1);
+    let line = &content[line_start..end];
+    let bytes = line.as_bytes();
+    let mut i = 0usize;
+    let mut in_string = false;
+    let mut escaped = false;
+
+    while i + 1 < bytes.len() {
+        let ch = bytes[i];
+
+        if in_string {
+            if escaped {
+                escaped = false;
+            } else if ch == b'\\' {
+                escaped = true;
+            } else if ch == b'"' {
+                in_string = false;
+            }
+            i += 1;
+            continue;
+        }
+
+        if ch == b'"' {
+            in_string = true;
+            i += 1;
+            continue;
+        }
+
+        if ch == b'/' && bytes[i + 1] == b'/' {
+            return Some(line_start + i);
+        }
+
+        i += 1;
+    }
+
+    None
+}
+
 fn insert_entries(raw: &str, entries: &[MappingInput]) -> Result<String, String> {
     let (block_start, block_end) = find_ext_options_block(raw)?;
     let line_ending = if raw.contains("\r\n") { "\r\n" } else { "\n" };
@@ -1237,9 +1276,14 @@ fn insert_entries(raw: &str, entries: &[MappingInput]) -> Result<String, String>
     insertion.push_str(&base_indent);
 
     let mut updated = String::with_capacity(raw.len() + insertion.len());
-    updated.push_str(&before_closing[..ws_start]);
     if has_existing {
+        let comma_pos = find_last_line_comment_start(before_closing, ws_start)
+            .unwrap_or(ws_start);
+        updated.push_str(&before_closing[..comma_pos]);
         updated.push(',');
+        updated.push_str(&before_closing[comma_pos..ws_start]);
+    } else {
+        updated.push_str(&before_closing[..ws_start]);
     }
     updated.push_str(&insertion);
     updated.push_str(&raw[block_end..]);
