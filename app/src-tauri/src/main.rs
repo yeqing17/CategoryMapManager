@@ -865,6 +865,11 @@ fn validate_jsonc(content: &str) -> Result<(), String> {
 
     let options = root
         .get("sExtOptions")
+        .or_else(|| {
+            root.get("commonConfig")
+                .and_then(|value| value.get("bussinessConfig"))
+                .and_then(|value| value.get("sExtOptions"))
+        })
         .and_then(|value| value.as_object())
         .ok_or_else(|| "sExtOptions 必须是对象".to_string())?;
 
