@@ -297,6 +297,22 @@ const guideSteps = [
   }
 }
 
+@media (max-height: 760px) {
+  .dashboard {
+    padding: 20px 24px;
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 22px 26px;
+    border-radius: 24px;
+  }
+
+  .guide-overlay {
+    padding: 24px;
+  }
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s ease;
